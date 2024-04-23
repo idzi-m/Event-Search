@@ -28,7 +28,7 @@ $conn->close();
     
     <fieldset>
         <legend>EVENTSEARCH - wszystkie wydarzenia w jednym miejscu!</legend>
-        <button onclick="window.location.href='SingIn.php'">REJESTRACJA</button> <button onclick="window.location.href='login.php'">LOGIN</button> <button onclick="window.location.href='profil.php'">PROFIL</button>
+        <button onclick="window.location.href='login.php'">LOGIN</button> <button onclick="window.location.href='profil.php'">PROFIL</button>
     </fieldset>
 
     <fieldset>

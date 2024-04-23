@@ -51,5 +51,8 @@ $conn->close();
     }
     ?>
 </fieldset>
+<fieldset>
+    <legend>EVENTSEARCH - wszystkie wydarzenia w jednym miejscu! Nie masz konta? Zarejestruj się!</legend>
+    <button onclick="window.location.href='SingIn.php'">REJESTRACJA</button>
 </body>
 </html>
