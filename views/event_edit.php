@@ -29,7 +29,7 @@ $conn->close();
     <title>Szczegóły wydarzenia</title>
 </head>
 
-<body>
+<body class="content">
 <fieldset>
     <legend>Szczegóły wydarzenia: <?php echo $event_data['name']; ?></legend>
     <p>Data wydarzenia: <?php echo $event_data['event_date']; ?></p>

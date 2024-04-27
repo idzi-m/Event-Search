@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Dodaj nowe wydarzenie</title>
 </head>
-<body>
+<body class='content'>
 
 <h2>Dodaj nowe wydarzenie</h2>
 <form method="post" action= "../db_scripts/event/add_event.php">
