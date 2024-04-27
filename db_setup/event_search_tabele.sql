@@ -1,75 +1,55 @@
-create table Cities(
-	id serial primary key,
-	name varchar(50),
-	province varchar(50),
-	size int
-	
+USE eventsearch;
+CREATE TABLE Participants(
+    id SERIAL PRIMARY KEY,
+    NAME VARCHAR(50),
+    TYPE VARCHAR(50)
+); 
+CREATE TABLE Tags(
+    id SERIAL PRIMARY KEY,
+    NAME VARCHAR(30)
 );
-
-create table Participants(
-	id serial primary key,
-	name varchar(50),
-	type varchar(50)
-	
+CREATE TABLE Users(
+    id SERIAL PRIMARY KEY,
+    first_name VARCHAR(50),
+    second_name VARCHAR(50),
+    last_name VARCHAR(50),
+    login VARCHAR(50),
+    pass VARCHAR(50)
 );
-
-create table Tags(
-	id serial primary key,
-	name varchar(30)
-	
-);
-
-create table Users(
-	id serial primary key,
-	first_name varchar(50),
-	second_name varchar(50),
-	last_name varchar(50),
-	login varchar(50),
-	password varchar(50)
-);
-
-
-create table Events(
-	id serial primary key,
-	name varchar(100),
-	is_deleted bool,
-	event_date timestamp,
-	event_city_id int,
-	type varchar(50),
-	location varchar(50),
-	cena real,
-	short_desc varchar(150),
-	long_desc varchar(2000),
-	creator_id int,
-	create_date timestamp,
-	Operation_date timestamp,
-	foreign key (event_city_id) references Cities(id),
-	foreign key (creator_id) references Users(id)
-);
-
-create table EventsParticipants(
-	id serial primary key,
-	event_id int,
-	participant_id int,
-	foreign key (event_id) references Events(id),
-	foreign key (participant_id) references Participants(id)
-	
-);
-
-create table EventsTags(
-	id serial primary key,
-	event_id int,
-	tag_id int,
-	foreign key (event_id) references Events(id),
-	foreign key (tag_id) references Tags(id)
-	
-);
-
-create table UsersEvents(
-	id serial primary key,
-	user_id int,
-	event_id int,
-	foreign key (user_id) references Users(id),
-	foreign key (event_id) references Events(id)
-	
+CREATE TABLE EVENTS(
+    id SERIAL PRIMARY KEY,
+    NAME VARCHAR(100),
+    is_deleted BOOLEAN,
+    event_date DATETIME,
+    event_city VARCHAR(50),
+    TYPE VARCHAR(50),
+    location VARCHAR(50),
+    cena REAL,
+    short_desc VARCHAR(150),
+    long_desc VARCHAR(2000),
+    creator_id INT,
+    create_date DATETIME,
+    operation_date DATETIME,
+    FOREIGN KEY(creator_id) REFERENCES Users(id)
+); 
+CREATE TABLE EventsParticipants(
+    id SERIAL PRIMARY KEY,
+    event_id INT,
+    participant_id INT,
+    FOREIGN KEY(event_id) REFERENCES EVENTS(id),
+    FOREIGN KEY(participant_id) REFERENCES Participants(id)
+); 
+CREATE TABLE EventsTags(
+    id SERIAL PRIMARY KEY,
+    event_id INT,
+    tag_id INT,
+    FOREIGN KEY(event_id) REFERENCES EVENTS(id),
+    FOREIGN KEY(tag_id) REFERENCES Tags(id)
+); 
+CREATE TABLE UsersEvents(
+    id SERIAL PRIMARY KEY,
+    user_id INT,
+    event_id INT,
+    FOREIGN KEY(user_id) REFERENCES Users(id),
+    FOREIGN KEY(event_id) REFERENCES EVENTS(id)
 );

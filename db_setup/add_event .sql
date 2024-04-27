@@ -3,19 +3,20 @@ DELIMITER //
 CREATE OR ALTER PROCEDURE add_event(
     IN p_name VARCHAR(50), 
     IN p_event_date TIMESTAMP, 
-    IN p_event_city_id INT,
+    IN p_event_city VARCHAR(50),
     IN p_type VARCHAR(50), 
     IN p_location VARCHAR(50), 
     IN p_cena REAL, 
     IN p_short_desc VARCHAR(300), 
-    IN p_long_desc VARCHAR(1000)
+    IN p_long_desc VARCHAR(1000),
+    IN p_creator_id INT
 )
 BEGIN
     INSERT INTO Events (
         name, 
         is_deleted, 
         event_date, 
-        event_city_id, 
+        event_city, 
         type, 
         location, 
         cena, 
@@ -28,13 +29,13 @@ BEGIN
         p_name, 
         0, 
         p_event_date, 
-        p_event_city_id, 
+        p_event_city, 
         p_type, 
         p_location, 
         p_cena, 
         p_short_desc, 
         p_long_desc, 
-        0, 
+        p_creator_id, 
         NOW(), 
         NOW()
     );
