@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Dodaj nowe wydarzenie</title>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body class='content'>
 

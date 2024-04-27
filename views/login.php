@@ -27,6 +27,8 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logowanie</title>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
@@ -53,6 +55,6 @@ $conn->close();
 </fieldset>
 <fieldset>
     <legend>EVENTSEARCH - wszystkie wydarzenia w jednym miejscu! Nie masz konta? Zarejestruj się!</legend>
-    <button onclick="window.location.href='SingIn.php'">REJESTRACJA</button>
+    <button onclick="window.location.href='register.php'">REJESTRACJA</button>
 </body>
 </html>

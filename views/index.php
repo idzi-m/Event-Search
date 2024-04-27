@@ -9,7 +9,7 @@ include '../db_scripts/event/event_search.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wyszukiwarka Eventów</title>
-    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
@@ -20,12 +20,8 @@ include '../db_scripts/event/event_search.php';
     
     <fieldset>
         <legend class="section-legend">EVENTSEARCH - wszystkie wydarzenia w jednym miejscu!</legend>
-        <button onclick="window.location.href='login.php'">LOGIN</button> <button onclick="window.location.href='profile.php'">PROFIL</button>
-    </fieldset>
-
-    <fieldset class="section">
-        <legend class="section-legend">Dodaj nowe wydarzenie</legend>
-        <!-- Przycisk DODAJ -->
+        <button onclick="window.location.href='login.php'" class='login-button'>LOGIN</button> 
+        <button onclick="window.location.href='profile.php'" class="profile-button">PROFIL</button>
         <button onclick="window.location.href='add_event_form.php'" class="add-button">DODAJ</button>
     </fieldset>
 
