@@ -29,19 +29,45 @@ include '../db_scripts/event/event_search.php';
         <legend class="section-legend">Wyszukiwarka</legend>
         <!-- Tutaj dodaj pole do wyszukiwania -->
         <form class="search-form" method="get" action="">
-            <input type="text" name="search" class="search-input" placeholder="Wyszukaj...">
+            <input type="text" name="search" class= "field-input" class="search-input" placeholder="Wyszukaj...">
             <button type="submit" formmethod="get" class="search-button">SZUKAJ</button>
         </form>
     </fieldset>
 
+<!-- Filtry -->
     <fieldset class="section">
-        <legend class="section-legend">Filtry</legend>
-        <!-- Tutaj dodaj belkę z filtrami -->
-    </fieldset>
+    <legend class="section-legend">Filtry</legend>
+    <form class="filter-form" method="get" action="">
+        <label for="city-filter">Miasto:</label>
+        <input type="text" id="city-filter" name="city" class="field-input" class="filter-input">
+
+        <label for="type-filter">Typ:</label>
+        <select id="type-filter" name="type" class="field-input" class="filter-select">
+            <option value="">Wybierz typ...</option>
+            <option value="koncert">Koncert</option>
+            <option value="wystawa">Wystawa</option>
+            <option value="spotkanie">Spotkanie</option>
+        </select>
+
+        <label for="date-from">Data od:</label>
+        <input type="date" id="date-from" name="date_from" class="field-input" class="filter-input" placeholder="Data od">
+
+        <label for="date-to">Data do:</label>
+        <input type="date" id="date-to" name="date_to" class="field-input" class="filter-input" placeholder="Data do">
+
+        <label for="price-from">Cena od:</label>
+        <input type="number" id="price-from" name="price_from" class="field-input" class="filter-input">
+
+        <label for="price-to">Cena do:</label>
+        <input type="number" id="price-to" name="price_to" class="field-input" class="filter-input">
+
+        <button type="submit" formmethod="get" class="clear-button">RESET</button>
+    </form>
+</fieldset>
 
     <fieldset class="section">
         <legend class="section-legend">Wyniki</legend>
-        <table border="1" class="results-table">
+        <table class="results-table">
             <tr>
                 
                 <th>Nazwa</th>
