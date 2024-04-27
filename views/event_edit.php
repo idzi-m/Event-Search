@@ -1,5 +1,5 @@
 <?php
-include 'php_scripts\connection.php';
+include '../php_scripts/connection.php';
 
 if (isset($_GET['event_id'])) {
     $event_id = $_GET['event_id'];
@@ -43,7 +43,7 @@ $conn->close();
 <fieldset>
     <legend>Akcje</legend>
     <!-- Tutaj możesz dodać dodatkowe akcje, np. edycja wydarzenia, usunięcie wydarzenia, etc. -->
-    <button onclick="window.location.href='index.php'">Powrót do listy wydarzeń</button>
+    <button onclick="window.location.href='./index.php'">Powrót do listy wydarzeń</button>
 </fieldset>
 
 </body>

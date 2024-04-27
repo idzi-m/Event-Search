@@ -7,7 +7,7 @@
 <body>
 
 <h2>Dodaj nowe wydarzenie</h2>
-<form method="post" action= "db_scripts\add_event.php">
+<form method="post" action= "../db_scripts/event/add_event.php">
     <input type="text" name="eventName" placeholder="Nazwa wydarzenia" required ><br>
     <input type="datetime-local" name="eventDate" placeholder="Data i godzina wydarzenia" required ><br>
     <input type="integer" name="eventCityId" placeholder="Miasto" required ><br>
@@ -18,7 +18,7 @@
     <input type="text" name="eventLongDesc" placeholder="Długi opis wydarzenia"><br>
 
     <button type="submit" name="add">DODAJ</button>
-    <button onclick="window.location.href='event_details.php'" name="cancel">ANULUJ</button>
+    <button onclick="window.location.href='./event_details.php'" name="cancel">ANULUJ</button>
 </form>
 
 </body>

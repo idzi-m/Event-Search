@@ -1,5 +1,5 @@
 <?php
-include 'php_scripts\connection.php';
+include '../php_scripts/connection.php';
 
 // Pobranie danych użytkownika
 //session_start();

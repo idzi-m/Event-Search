@@ -1,5 +1,5 @@
 <?php
-include '../php_scripts/connection.php';
+include '../../php_scripts/connection.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $eventName = $_POST['eventName'];
@@ -17,9 +17,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_param("ssississ", $eventName, $eventDate, $city, $type, $location, $price, $shortDesc, $longDesc);
 
         if ($stmt->execute()) {
-            echo "<script>alert('Wydarzenie zostało dodane'); window.location.href='../index.php';</script>";
+            echo "<script>alert('Wydarzenie zostało dodane'); window.location.href='../../views/index.php';</script>";
         } else {
-            echo "<script>alert('Błąd podczas dodawania wydarzenia'); window.location.href='../index.php';</script>";
+            echo "<script>alert('Błąd podczas dodawania wydarzenia'); window.location.href='../../views/index.php';</script>";
         }
 
         $stmt->close();

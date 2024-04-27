@@ -1,5 +1,5 @@
 <?php
-include 'php_scripts/connection.php';
+include '../php_scripts/connection.php';
 ?>
 
 <!DOCTYPE html>

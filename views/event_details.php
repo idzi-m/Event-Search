@@ -1,5 +1,5 @@
 <?php
-include 'php_scripts\connection.php';
+include '../php_scripts/connection.php';
 
 if (isset($_GET['event_id'])) {
     $event_id = $_GET['event_id'];
