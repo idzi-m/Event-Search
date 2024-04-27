@@ -33,14 +33,13 @@ $conn->close();
 <fieldset>
     <legend>Szczegóły wydarzenia: <?php echo $event_data['name']; ?></legend>
     <p>Data wydarzenia: <?php echo $event_data['event_date']; ?></p>
-    <p>Miasto: <?php echo $event_data['event_city_id']; ?></p>
+    <p>Miasto: <?php echo $event_data['event_city']; ?></p>
     <p>Typ: <?php echo $event_data['type']; ?></p>
     <p>Lokalizacja: <?php echo $event_data['location']; ?></p>
     <p>Krótki opis: <?php echo $event_data['short_desc']; ?></p>
     <p>Długi opis: <?php echo $event_data['long_desc']; ?></p>
     <p>Cena: <?php echo $event_data['cena']; ?></p>
     <p>Twórca: <?php echo $event_data['creator_id']; ?></p>
-    <p>Uczestnicy: <?php echo $event_data['creator_id']; ?></p>
 </fieldset>
 
 <fieldset>

@@ -52,7 +52,7 @@ $conn->close();
                 echo "<td>" . $row["id"] . "</td>";
                 echo "<td>" . $row["name"] . "</td>";
                 echo "<td>" . $row["event_date"] . "</td>";
-                echo "<td>" . $row["event_city_id"] . "</td>";
+                echo "<td>" . $row["event_city"] . "</td>";
                 echo "<td>" . $row["type"] . "</td>";
                 echo "<td>" . $row["location"] . "</td>";
                 echo "<td>" . $row["short_desc"] . "</td>";

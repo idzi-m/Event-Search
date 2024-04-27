@@ -1,15 +1,14 @@
 use eventsearch;
 DELIMITER //
-CREATE OR ALTER PROCEDURE add_event(
+CREATE OR REPLACE PROCEDURE add_event(
     IN p_name VARCHAR(50), 
-    IN p_event_date TIMESTAMP, 
+    IN p_event_date DATETIME, 
     IN p_event_city VARCHAR(50),
     IN p_type VARCHAR(50), 
     IN p_location VARCHAR(50), 
     IN p_cena REAL, 
     IN p_short_desc VARCHAR(300), 
-    IN p_long_desc VARCHAR(1000),
-    IN p_creator_id INT
+    IN p_long_desc VARCHAR(1000)
 )
 BEGIN
     INSERT INTO Events (
@@ -35,7 +34,7 @@ BEGIN
         p_cena, 
         p_short_desc, 
         p_long_desc, 
-        p_creator_id, 
+        1, 
         NOW(), 
         NOW()
     );

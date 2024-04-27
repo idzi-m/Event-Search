@@ -10,7 +10,7 @@
 <form method="post" action= "../db_scripts/event/add_event.php">
     <input type="text" name="eventName" placeholder="Nazwa wydarzenia" required ><br>
     <input type="datetime-local" name="eventDate" placeholder="Data i godzina wydarzenia" required ><br>
-    <input type="integer" name="eventCityId" placeholder="Miasto" required ><br>
+    <input type="integer" name="eventCity" placeholder="Miasto" required ><br>
     <input type="text" name="eventType" placeholder="Typ wydarzenia"><br>
     <input type="text" name="eventLocation" placeholder="Lokalizacja" required ><br>
     <input type="text" name="eventPrice" placeholder="Cena"><br>
