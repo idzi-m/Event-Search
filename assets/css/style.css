@@ -14,6 +14,7 @@
 }
 .section{
     background-color: rgba(37, 182, 184, 0.5);
+    width: 98%;
 
 }
 /* Stylowanie nagłówka i stopki */
@@ -26,6 +27,7 @@
 
 /* Stylowanie sekcji */
 .section {
+    width: 0.9vm;
     margin-bottom: 20px;
     padding: 5px;
     border: 1px solid #080540;
@@ -82,9 +84,9 @@ button:active {
 }
 /* Stylowanie tabeli wyników */
 .results-table {
-    width: 100%;
     border-collapse: collapse;
     background-color:rgba(49, 180, 228, 0.5);
+    overflow: hidden;
 }
 
 .results-table th, .results-table td {
