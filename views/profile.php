@@ -59,8 +59,7 @@ $conn->close();
                 echo "<td>" . $row["location"] . "</td>";
                 echo "<td>" . $row["short_desc"] . "</td>";
                 echo "<td>" . $row["cena"] . "</td>";
-                echo "<td><button onclick=\"window.location.href='event_details.php?event_id=" . $row["id"] . "'\">PODGLĄD</button>";
-                echo "<td><button onclick=\"window.location.href='event_edit.php?event_id=" . $row["id"] . "'\">EDYCJA</button>";
+                echo "<td><button onclick=\"window.location.href='event_details.php?event_id=" . $row["id"] . "'\">SZCZEGÓŁY</button>";
                 echo "</tr>";
             }
         } else {

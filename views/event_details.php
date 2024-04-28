@@ -22,7 +22,7 @@ $conn->close();
 ?>
 
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" class='document'>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,23 +31,34 @@ $conn->close();
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
-<body class='content'>
-<fieldset>
-    <legend>Szczegóły wydarzenia: <?php echo $event_data['name']; ?></legend>
-    <p>Data wydarzenia: <?php echo $event_data['event_date']; ?></p>
-    <p>Miasto: <?php echo $event_data['event_city']; ?></p>
-    <p>Typ: <?php echo $event_data['type']; ?></p>
-    <p>Lokalizacja: <?php echo $event_data['location']; ?></p>
-    <p>Krótki opis: <?php echo $event_data['short_desc']; ?></p>
-    <p>Długi opis: <?php echo $event_data['long_desc']; ?></p>
-    <p>Cena: <?php echo $event_data['cena']; ?></p>
-    <p>Twórca: <?php echo $event_data['creator_id']; ?></p>
+<body class="content">
+<fieldset class="section" class="event_details">
+    <legend class="section-legend">Szczegóły wydarzenia: <?php echo $event_data['name']; ?></legend>
+    <table class="results-table">
+        <tr>
+            <td class="event-details-image" rowspan="2">
+                <!-- miejsce na zdjęcie wydarzenia -->
+            </td>
+            <td class="event-details-data">
+                <p class="field-label">Data wydarzenia: <?php echo $event_data['event_date']; ?></p>
+                <p class="field-label">Miasto: <?php echo $event_data['event_city']; ?></p>
+                <p class="field-label">Typ: <?php echo $event_data['type']; ?></p>
+                <p class="field-label">Lokalizacja: <?php echo $event_data['location']; ?></p>
+                <p class="field-label">Krótki opis: <?php echo $event_data['short_desc']; ?></p>
+                <p class="field-label">Długi opis: <?php echo $event_data['long_desc']; ?></p>
+                <p class="field-label">Cena: <?php echo $event_data['cena']; ?></p>
+                <p class="field-label">Twórca: <?php echo $event_data['creator_id']; ?></p>
+            </td>
+        </tr>
+    </table>
 </fieldset>
 
-<fieldset>
-    <legend>Akcje</legend>
-    <!-- Tutaj możesz dodać dodatkowe akcje, np. edycja wydarzenia, usunięcie wydarzenia, etc. -->
-    <button onclick="window.location.href='index.php'">Powrót do listy wydarzeń</button>
+<fieldset class="section">
+    <legend class="section-legend">Akcje</legend>
+    <button onclick="window.location.href='index.php'" class="button">POWRÓT DO LISTY WYDARZEŃ</button>
+    <button onclick="window.location.href='edit_event.php?event_id=<?php echo $event_data['id']; ?>'" class="button__edit">EDYTUJ WYDARZENIE</button>
+    <button onclick="if(confirm('Czy na pewno chcesz usunąć to wydarzenie?')) window.location.href='delete_event.php?event_id=<?php echo $event_data['id']; ?>'" class="button__delete">USUŃ WYDARZENIE</button>
+    
 </fieldset>
 
 </body>
