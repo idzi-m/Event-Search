@@ -56,8 +56,8 @@ $conn->close();
 <fieldset class="section">
     <legend class="section-legend">Akcje</legend>
     <button onclick="window.location.href='index.php'" class="button">POWRÓT DO LISTY WYDARZEŃ</button>
-    <button onclick="window.location.href='edit_event.php?event_id=<?php echo $event_data['id']; ?>'" class="button__edit">EDYTUJ WYDARZENIE</button>
-    <button onclick="if(confirm('Czy na pewno chcesz usunąć to wydarzenie?')) window.location.href='delete_event.php?event_id=<?php echo $event_data['id']; ?>'" class="button__delete">USUŃ WYDARZENIE</button>
+    <button onclick="window.location.href='edit_event_form.php?event_id=<?php echo $event_data['id']; ?>'" class="button__edit">EDYTUJ WYDARZENIE</button>
+    <button onclick="if(confirm('Czy na pewno chcesz usunąć to wydarzenie?')) window.location.href='../db_scripts/event/event_delete.php?event_id=<?php echo $event_data['id']; ?>'" class="button__delete">USUŃ WYDARZENIE</button>
     
 </fieldset>
 

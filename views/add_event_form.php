@@ -9,7 +9,7 @@
 <body class='content'>
 <fieldset class="section">
         <legend class="section-legend">Dodaj nowe wydarzenie!</legend>        
-<form method="post" action= "../db_scripts/event/add_event.php">
+<form method="post" action= "../db_scripts/event/event_add.php">
     <input class="field-input" type="text" name="eventName" placeholder="Nazwa wydarzenia" required ><br>
     <input class="field-input" type="datetime-local" name="eventDate" placeholder="Data i godzina wydarzenia" required ><br>
     <input class="field-input" type="integer" name="eventCity" placeholder="Miasto" required ><br>
@@ -21,7 +21,7 @@
 
     <button class="button__edit" type="submit" name="add">DODAJ</button>
     <button type="reset" class="button__clear">RESETUJ FORMULARZ</button>
-    <button class="button" onclick="window.location.href='./event_details.php'" name="cancel">ANULUJ</button>
+    <button class="button" onclick="window.location.href='index.php'" name="cancel">ANULUJ</button>
 </form>
 
     </fieldset>

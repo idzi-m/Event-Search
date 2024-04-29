@@ -1,6 +1,6 @@
 use eventsearch;
 DELIMITER //
-CREATE OR REPLACE PROCEDURE add_event(
+CREATE OR REPLACE PROCEDURE event_add(
     IN p_name VARCHAR(50), 
     IN p_event_date DATETIME, 
     IN p_event_city VARCHAR(50),
