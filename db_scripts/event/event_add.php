@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['add'])) {
         // Wywołanie stored procedure 'add_event'
         $stmt = $conn->prepare("CALL event_add(?, ?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssississ", $eventName, $eventDate, $city, $type, $location, $price, $shortDesc, $longDesc);
+        $stmt->bind_param("sssssiss", $eventName, $eventDate, $city, $type, $location, $price, $shortDesc, $longDesc);
 
         if ($stmt->execute()) {
             echo "<script>alert('Wydarzenie zostało dodane'); window.location.href='../../views/index.php';</script>";

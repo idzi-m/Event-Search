@@ -15,10 +15,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['edit'])) {
         // Wywołanie stored procedure 'add_event'
         $stmt = $conn->prepare("CALL event_update(?, ?, ?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("issississ", $event_id, $eventName, $eventDate, $city, $type, $location, $price, $shortDesc, $longDesc);
+        $stmt->bind_param("isssssiss", $event_id, $eventName, $eventDate, $city, $type, $location, $price, $shortDesc, $longDesc);
 
         if ($stmt->execute()) {
-            echo "<script>alert('Wydarzenie zostało dodane'); window.location.href='../../views/event_details.php?event_id=$event_id';</script>";
+            echo "<script>alert('Wydarzenie zostało zmodyfikowane'); window.location.href='../../views/event_details.php?event_id=$event_id';</script>";
         } else {
             echo "<script>alert('Błąd podczas dodawania wydarzenia'); window.location.href='../../views/index.php';</script>";
         }

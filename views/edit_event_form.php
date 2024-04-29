@@ -36,12 +36,12 @@ $conn->close();
         <input class="field-input" type="hidden" name="event_id" value="<?php echo $event_data['id']; ?>">
         <input class="field-input" type="text" name="eventName" value="<?php echo $event_data['name']; ?>" placeholder="Nazwa wydarzenia" required ><br>
         <input class="field-input" type="datetime-local" name="eventDate" value="<?php echo $event_data['event_date']; ?>" placeholder="Data i godzina wydarzenia" required ><br>
-        <input class="field-input" type="integer" name="eventCity" value="<?php echo $event_data['event_city']; ?>" placeholder="Miasto" required ><br>
+        <input class="field-input" type="text" name="eventCity" value="<?php echo $event_data['event_city']; ?>" placeholder="Miasto" required ><br>
         <input class="field-input" type="text" name="eventType" value="<?php echo $event_data['type']; ?>" placeholder="Typ wydarzenia"><br>
         <input class="field-input" type="text" name="eventLocation" value="<?php echo $event_data['location']; ?>" placeholder="Lokalizacja" required ><br>
         <input class="field-input" type="text" name="eventPrice" value="<?php echo $event_data['cena']; ?>" placeholder="Cena"><br>
-        <input class="field-input" type="textbox" name="eventShortDesc" value="<?php echo $event_data['short_desc']; ?>" placeholder="Krótki opis"><br>
-        <input class="field-input" type="textbox" name="eventLongDesc" value="<?php echo $event_data['long_desc']; ?>" placeholder="Długi opis wydarzenia"><br>
+        <input class="field-input" type="textarea" name="eventShortDesc" value="<?php echo $event_data['short_desc']; ?>" placeholder="Krótki opis"><br>
+        <input class="field-input" type="textarea" name="eventLongDesc" value="<?php echo $event_data['long_desc']; ?>" placeholder="Długi opis wydarzenia"><br>
 
         <button class="button__edit" type="submit" name="edit">ZAPISZ</button>
         <button type="reset" class="button__clear">RESETUJ FORMULARZ</button>

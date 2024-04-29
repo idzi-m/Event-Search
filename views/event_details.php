@@ -17,6 +17,15 @@ if (isset($_GET['event_id'])) {
     header("Location: index.php");  // Przekierowanie do strony wyszukiwania, jeśli nie podano ID wydarzenia
     exit();
 }
+    $sql_1 = "SELECT first_name, last_name FROM Users WHERE id = {$event_data['creator_id']}";
+    $result_1 = $conn->query($sql_1);
+
+    if ($result_1->num_rows > 0) {
+        $creator_data = $result_1->fetch_assoc();
+        $creator = $creator_data['first_name'] . ' ' . $creator_data['last_name'];
+    } else {
+        $creator = "Nieznany"; // Domyślna wartość, jeśli twórca nie zostanie znaleziony
+    }
 
 $conn->close();
 ?>
@@ -47,7 +56,7 @@ $conn->close();
                 <p class="field-label">Krótki opis: <?php echo $event_data['short_desc']; ?></p>
                 <p class="field-label">Długi opis: <?php echo $event_data['long_desc']; ?></p>
                 <p class="field-label">Cena: <?php echo $event_data['cena']; ?></p>
-                <p class="field-label">Twórca: <?php echo $event_data['creator_id']; ?></p>
+                <p class="field-label">Twórca: <?php echo $creator; ?></p>
             </td>
         </tr>
     </table>
