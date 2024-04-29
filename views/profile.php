@@ -69,6 +69,11 @@ $conn->close();
     </table>
 </fieldset>
 
+<fieldset class="section">
+    <legend class="section-legend">Akcje</legend>
+    <button onclick="window.location.href='index.php'" class="button">POWRÓT DO LISTY WYDARZEŃ</button>
+</fieldset>
+
 </body>
 </html>
 

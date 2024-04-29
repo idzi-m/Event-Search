@@ -58,6 +58,9 @@ $conn->close();
     <legend class="section-legend">EVENTSEARCH - wszystkie wydarzenia w jednym miejscu! Nie masz konta? Zarejestruj się!</legend>
     <button onclick="window.location.href='register.php'" class="button">REJESTRACJA</button>
 </fieldset>
-
+<fieldset class="section">
+    <legend class="section-legend">Akcje</legend>
+    <button onclick="window.location.href='index.php'" class="button">POWRÓT DO LISTY WYDARZEŃ</button>
+</fieldset>
 </body>
 </html>

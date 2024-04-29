@@ -22,7 +22,7 @@
             <legend class="section-legend">EVENTSEARCH - wszystkie wydarzenia w jednym miejscu!</legend>
             <button onclick="window.location.href='login.php'" class='login-button'>LOGIN</button> 
             <button onclick="window.location.href='profile.php'" class="profile-button">PROFIL</button>
-            <button onclick="window.location.href='add_event_form.php'" class="add-button">DODAJ</button>
+            <button onclick="window.location.href='add_event_form.php'" class="add-button">DODAJ WYDARZENIE</button>
         </fieldset>
 
         <fieldset class="section">

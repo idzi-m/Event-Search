@@ -30,9 +30,9 @@ $conn->close();
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body class='content'>
+<form method="post" action="../db_scripts/event/event_update.php">
 <fieldset class="section">
     <legend class="section-legend">Dodaj nowe wydarzenie!</legend>        
-    <form method="post" action="../db_scripts/event/event_update.php">
         <input class="field-input" type="hidden" name="event_id" value="<?php echo $event_data['id']; ?>">
         <input class="field-input" type="text" name="eventName" value="<?php echo $event_data['name']; ?>" placeholder="Nazwa wydarzenia" required ><br>
         <input class="field-input" type="datetime-local" name="eventDate" value="<?php echo $event_data['event_date']; ?>" placeholder="Data i godzina wydarzenia" required ><br>
@@ -42,12 +42,13 @@ $conn->close();
         <input class="field-input" type="text" name="eventPrice" value="<?php echo $event_data['cena']; ?>" placeholder="Cena"><br>
         <input class="field-input" type="textarea" name="eventShortDesc" value="<?php echo $event_data['short_desc']; ?>" placeholder="Krótki opis"><br>
         <input class="field-input" type="textarea" name="eventLongDesc" value="<?php echo $event_data['long_desc']; ?>" placeholder="Długi opis wydarzenia"><br>
-
+</fieldset>
+<fieldset class="section">
+    <legend class="section-legend">Akcje</legend>
         <button class="button__edit" type="submit" name="edit">ZAPISZ</button>
         <button type="reset" class="button__clear">RESETUJ FORMULARZ</button>
         <button class="button" onclick="window.location.href='event_details.php?event_id=<?php echo $event_data['id']; ?>'" name="cancel">ANULUJ</button>
-    </form>
 </fieldset>
-
+</form>
 </body>
 </html>

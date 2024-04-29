@@ -19,7 +19,7 @@ include '../php_scripts/connection.php';
 
             <div class="form__group">
                 <label hidden for="name">Imię lub nick</label>
-                <input id="name" type="text" placeholder="Login" minlength="3" maxlength="20" size="12" required autofocus class="field-input">
+                <input id="name" type="text" placeholder="Ladogin" minlength="3" maxlength="20" size="12" required autofocus class="field-input">
             </div>
 
             <div class="form__group">

@@ -66,8 +66,10 @@ $conn->close();
     <legend class="section-legend">Akcje</legend>
     <button onclick="window.location.href='index.php'" class="button">POWRÓT DO LISTY WYDARZEŃ</button>
     <button onclick="window.location.href='edit_event_form.php?event_id=<?php echo $event_data['id']; ?>'" class="button__edit">EDYTUJ WYDARZENIE</button>
-    <button onclick="if(confirm('Czy na pewno chcesz usunąć to wydarzenie?')) window.location.href='../db_scripts/event/event_delete.php?event_id=<?php echo $event_data['id']; ?>'" class="button__delete">USUŃ WYDARZENIE</button>
-    
+    <form action="../db_scripts/event/event_delete.php" method="post">
+        <input type="hidden" name="event_id" value="<?php echo $event_data['id']; ?>">
+        <button type="submit" name="event_delete" class="button__delete" onclick="return confirm('Czy na pewno chcesz usunąć to wydarzenie?')">USUŃ WYDARZENIE</button>
+    </form>
 </fieldset>
 
 </body>
