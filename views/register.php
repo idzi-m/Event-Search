@@ -18,28 +18,28 @@ include '../php_scripts/connection.php';
             <legend class="section-legend">Twoje dane:</legend>
 
             <div class="form__group">
-                <label for="name">Imię lub nick</label>
-                <input id="name" type="text" placeholder="np. Barnaba" minlength="3" maxlength="20" size="12" required autofocus class="form_input">
+                <label hidden for="name">Imię lub nick</label>
+                <input id="name" type="text" placeholder="login" minlength="3" maxlength="20" size="12" required autofocus class="field-input">
             </div>
 
             <div class="form__group">
-                <label for="password">Hasło</label>
-                <input id="password" type="password" placeholder="np. ABc!@DSA#+" minlength="8" required class="form_input">
+                <label hidden for="password">Hasło</label>
+                <input id="password" type="password" placeholder="Hasło" minlength="8" required class="field-input">
             </div>
 
             <div class="form__group">
-                <label for="password_repeat">Powtórz hasło</label>
-                <input id="password_repeat" type="password" minlength="8" required class="form_input">
+                <label hidden for="password_repeat">Powtórz hasło</label>
+                <input id="password_repeat" placeholder="Powtórz Hasło" type="password" minlength="8" required class="field-input">
             </div>
 
             <div class="form__group">
-                <label for="phone">Numer telefonu</label>
-                <input id="phone" type="tel" pattern="[0-9]{9}" title="wprowadź 9 cyfer" required class="form_input">
+                <label hidden for="phone">Numer telefonu</label>
+                <input id="phone" type="tel" pattern="[0-9]{9}"  placeholder="Numer telefonu" title="wprowadź 9 cyfer" required class="field-input">
             </div>
 
             <div class="form__group">
-                <label for="birth-date">Data urodzenia</label>
-                <input id="birth-date" type="date" min="1918-11-11" class="form_input">
+                <label hidden for="birth-date">Data urodzenia</label>
+                <input id="birth-date" type="date" min="1918-11-11" class="field-input">
             </div>
 
             <div class="form__group">
