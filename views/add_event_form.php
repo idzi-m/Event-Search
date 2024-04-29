@@ -7,21 +7,24 @@
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body class='content'>
-
-<h2>Dodaj nowe wydarzenie</h2>
+<fieldset class="section">
+        <legend class="section-legend">Dodaj nowe wydarzenie!</legend>        
 <form method="post" action= "../db_scripts/event/add_event.php">
-    <input type="text" name="eventName" placeholder="Nazwa wydarzenia" required ><br>
-    <input type="datetime-local" name="eventDate" placeholder="Data i godzina wydarzenia" required ><br>
-    <input type="integer" name="eventCity" placeholder="Miasto" required ><br>
-    <input type="text" name="eventType" placeholder="Typ wydarzenia"><br>
-    <input type="text" name="eventLocation" placeholder="Lokalizacja" required ><br>
-    <input type="text" name="eventPrice" placeholder="Cena"><br>
-    <input type="text" name="eventShortDesc" placeholder="Krótki opis"><br>
-    <input type="text" name="eventLongDesc" placeholder="Długi opis wydarzenia"><br>
+    <input class="field-input" type="text" name="eventName" placeholder="Nazwa wydarzenia" required ><br>
+    <input class="field-input" type="datetime-local" name="eventDate" placeholder="Data i godzina wydarzenia" required ><br>
+    <input class="field-input" type="integer" name="eventCity" placeholder="Miasto" required ><br>
+    <input class="field-input" type="text" name="eventType" placeholder="Typ wydarzenia"><br>
+    <input class="field-input" type="text" name="eventLocation" placeholder="Lokalizacja" required ><br>
+    <input class="field-input" type="text" name="eventPrice" placeholder="Cena"><br>
+    <input class="field-input" type="textbox" name="eventShortDesc" placeholder="Krótki opis"><br>
+    <input class="field-input" type="textbox" name="eventLongDesc" placeholder="Długi opis wydarzenia"><br>
 
-    <button type="submit" name="add">DODAJ</button>
-    <button onclick="window.location.href='./event_details.php'" name="cancel">ANULUJ</button>
+    <button class="button__edit" type="submit" name="add">DODAJ</button>
+    <button type="reset" class="button__clear">RESETUJ FORMULARZ</button>
+    <button class="button" onclick="window.location.href='./event_details.php'" name="cancel">ANULUJ</button>
 </form>
+
+    </fieldset>
 
 </body>
 </html>

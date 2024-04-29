@@ -17,7 +17,7 @@ $conn->close();
 ?>
 
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" class="document">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,15 +26,15 @@ $conn->close();
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
-<body>
-<fieldset>
-    <legend>Profil użytkownika: <?php echo $user_data['first_name'] . ' ' . $user_data['last_name']; ?></legend>
+<body class="content">
+<fieldset class="section">
+    <legend class="section-legend">Profil użytkownika: <?php echo $user_data['first_name'] . ' ' . $user_data['last_name']; ?></legend>
     <p>ID użytkownika: <?php echo $user_data['id']; ?></p>
 </fieldset>
 
-<fieldset>
-    <legend>Lista wydarzeń utworzonych przez użytkownika</legend>
-    <table border="1">
+<fieldset class="section">
+    <legend class="section-legend">Lista wydarzeń utworzonych przez użytkownika</legend>
+    <table class="results-table">
         <tr>
             <th>ID</th>
             <th>Nazwa wydarzenia</th>
@@ -59,7 +59,7 @@ $conn->close();
                 echo "<td>" . $row["location"] . "</td>";
                 echo "<td>" . $row["short_desc"] . "</td>";
                 echo "<td>" . $row["cena"] . "</td>";
-                echo "<td><button onclick=\"window.location.href='event_details.php?event_id=" . $row["id"] . "'\">SZCZEGÓŁY</button>";
+                echo "<td><button onclick=\"window.location.href='event_details.php?event_id=" . $row["id"] . "'\" class='button'>SZCZEGÓŁY</button>";
                 echo "</tr>";
             }
         } else {
@@ -71,3 +71,4 @@ $conn->close();
 
 </body>
 </html>
+

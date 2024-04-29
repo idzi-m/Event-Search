@@ -22,7 +22,7 @@ $conn->close();
 ?>
 
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" class="document">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,20 +31,20 @@ $conn->close();
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
-<body>
-<fieldset>
-    <legend>Logowanie</legend>
-    <form method="post" action="">
-        <div>
-            <label for="login">Nazwa użytkownika:</label>
-            <input type="text" name="username" required>
+<body class="content">
+<fieldset class="section_login">
+    <legend class="section-legend">Logowanie</legend>
+    <form method="post" action="" class="form__login">
+        <div class="form__group">
+            <label hidden for="login">Nazwa użytkownika:</label>
+            <input type="text" name="username" class="field-input" placeholder="Nazwa użytkownika" required>
         </div>
-        <div>
-            <label for="password">Hasło:</label>
-            <input type="password" name="password" required>
+        <div class="form__group">
+            <label hidden for="password">Hasło:</label>
+            <input type="password" name="password" class="field-input" placeholder="Hasło" required>
         </div>
-        <div>
-            <button type="submit">ZALOGUJ</button>
+        <div class="form__group">
+            <button type="submit" class="button">ZALOGUJ</button>
         </div>
     </form>
     <?php
@@ -53,8 +53,11 @@ $conn->close();
     }
     ?>
 </fieldset>
-<fieldset>
-    <legend>EVENTSEARCH - wszystkie wydarzenia w jednym miejscu! Nie masz konta? Zarejestruj się!</legend>
-    <button onclick="window.location.href='register.php'">REJESTRACJA</button>
+
+<fieldset class="section">
+    <legend class="section-legend">EVENTSEARCH - wszystkie wydarzenia w jednym miejscu! Nie masz konta? Zarejestruj się!</legend>
+    <button onclick="window.location.href='register.php'" class="button">REJESTRACJA</button>
+</fieldset>
+
 </body>
 </html>

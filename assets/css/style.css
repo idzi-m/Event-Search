@@ -12,11 +12,6 @@
     background-position: center;
     background-repeat: no-repeat;
 }
-.section{
-    background-color: rgba(37, 182, 184, 0.5);
-    width: 98%;
-
-}
 /* Stylowanie nagłówka i stopki */
 .header-footer {
     background-color: #f0f0f0;
@@ -31,6 +26,7 @@
     margin-bottom: 20px;
     padding: 5px;
     border: 1px solid #080540;
+    background-color: rgba(37, 182, 184, 0.5);
     border-radius: 8px; /* Zaokrąglone krawędzie */
 }
 
@@ -39,6 +35,17 @@
     font-weight: bold;
 }
 
+.section_login {
+    background-color: rgba(37, 182, 184, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0.9vm;
+    margin-bottom: 20px;
+    padding: 5px;
+    border: 1px solid #080540;
+    border-radius: 8px; /* Zaokrąglone krawędzie */
+}
 /* Stylowanie przycisków */
 button {
     padding: 8px;
@@ -70,16 +77,16 @@ button:active {
     display: inline-block;
 }
 
-.clear-button {
+.button__clear {
     padding: 8px;
     background-color: #a76e28;
 }
 .button__edit, .search-button {
-    padding: 8px 20px;
+    padding: 8px;
     background-color: #18e7ba;
 }
 .button__delete{
-    padding: 8px 20px;
+    padding: 8px;
     background-color: #e0d314;
 }
 /* Stylowanie tabeli wyników */
