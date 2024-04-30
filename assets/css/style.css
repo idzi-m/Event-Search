@@ -33,18 +33,19 @@
 /* Stylowanie legend */
 .section-legend {
     font-weight: bold;
+    color: rgb(6, 36, 229);
+    margin: auto;
+    padding: 5px;
+    width: fit-content;
+    text-align: center;
+
 }
 
-.section_login {
-    background-color: rgba(37, 182, 184, 0.5);
+.section__login, .form__group{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 0.9vm;
-    margin-bottom: 20px;
-    padding: 5px;
-    border: 1px solid #080540;
-    border-radius: 8px; /* Zaokrąglone krawędzie */
+
 }
 /* Stylowanie przycisków */
 button {

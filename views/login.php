@@ -32,7 +32,12 @@ $conn->close();
 </head>
 
 <body class="content">
-<fieldset class="section_login">
+<fieldset class="section section__login">
+    <legend class="section-legend">EVENTSEARCH - wszystkie wydarzenia w jednym miejscu!<br> Nie masz konta? Zarejestruj się!</legend>
+    <button onclick="window.location.href='register.php'" class="button">REJESTRACJA</button>
+</fieldset>
+
+<fieldset class="section section__login">
     <legend class="section-legend">Logowanie</legend>
     <form method="post" action="" class="form__login">
         <div class="form__group">
@@ -54,11 +59,7 @@ $conn->close();
     ?>
 </fieldset>
 
-<fieldset class="section">
-    <legend class="section-legend">EVENTSEARCH - wszystkie wydarzenia w jednym miejscu! Nie masz konta? Zarejestruj się!</legend>
-    <button onclick="window.location.href='register.php'" class="button">REJESTRACJA</button>
-</fieldset>
-<fieldset class="section">
+<fieldset class="section section__login">
     <legend class="section-legend">Akcje</legend>
     <button onclick="window.location.href='index.php'" class="button">POWRÓT DO LISTY WYDARZEŃ</button>
 </fieldset>
