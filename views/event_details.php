@@ -47,7 +47,7 @@ $conn->close();
     <p>Użytkownik:<?php if(isset($_SESSION['login'])) {echo $_SESSION['login'] ;} ?></p> 
 </fieldset>
 <fieldset class="section" class="event_details">
-    <legend class="section-legend">Szczegóły wydarzenia: <?php echo $event_data['name']; ?></legend>
+    <legend class="section__legend">Szczegóły wydarzenia: <?php echo $event_data['name']; ?></legend>
     <table class="results-table">
         <tr>
             <td class="event-details-image" rowspan="2">
@@ -68,7 +68,7 @@ $conn->close();
 </fieldset>
 
 <fieldset class="section section__action">
-    <legend class="section-legend">Akcje</legend>
+    <legend class="section__legend">Akcje</legend>
     <button onclick="window.location.href='index.php'" class="button">POWRÓT DO LISTY WYDARZEŃ</button>
     <button <?php if(!isset($_SESSION['user_id']) || $_SESSION['user_id'] != $event_data['creator_id']) {echo "hidden";}?> onclick="window.location.href='edit_event_form.php?event_id=<?php echo $event_data['id']; ?>'" class="button__edit">EDYTUJ WYDARZENIE</button>
     <form action="../db_scripts/event/event_delete.php" method="post">

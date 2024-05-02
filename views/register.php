@@ -15,7 +15,7 @@ include '../php_scripts/connection.php';
     <form action="script.php" autocomplete="on" method="post" enctype="multipart/form-data" class="form__register">
         <h2 class="form__title">Utwórz konto</h2>
         <fieldset class="section">
-            <legend class="section-legend">Twoje dane:</legend>
+            <legend class="section__legend">Twoje dane:</legend>
 
             <div class="form__group">
                 <label hidden for="name">Imię lub nick</label>
@@ -74,7 +74,7 @@ include '../php_scripts/connection.php';
             </div>
         </fieldset>
         <fieldset class="section section__action">
-            <legend class="section-legend">Akcje</legend>
+            <legend class="section__legend">Akcje</legend>
             <button type="submit" class="button__edit">ZAPISZ</button>
             <button type="reset" class="button__clear">RESETUJ FORMULARZ</button>
             <button type="button" onclick="window.location.href='index.php'" class="button">ANULUJ</button>

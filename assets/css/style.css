@@ -13,7 +13,7 @@
     background-repeat: no-repeat;
 }
 /* Stylowanie nagłówka i stopki */
-.header-footer {
+.footer__header {
     background-color: #f0f0f0;
     padding: 20px;
     text-align: center;
@@ -22,16 +22,19 @@
 
 /* Stylowanie sekcji */
 .section {
+    text-align: center;
+    justify-content: center;
     width: 0.98vm;
     margin-bottom: 20px;
     padding: 5px;
     border: 1px solid #080540;
     background-color: rgba(37, 182, 184, 0.5);
     border-radius: 8px; /* Zaokrąglone krawędzie */
+    
 }
 
 /* Stylowanie legend */
-.section-legend {
+.section__legend {
     font-weight: bold;
     color: rgb(6, 36, 229);
     margin: auto;
@@ -84,7 +87,7 @@ button:active {
     display: inline-block;
 }
 
-.button__clear {
+.button__clear, .button__logout{
     padding: 8px;
     background-color: #a76e28;
 }
@@ -101,6 +104,8 @@ button:active {
     border-collapse: collapse;
     background-color:rgba(49, 180, 228, 0.5);
     overflow: hidden;
+    justify-content: center;
+    text-align: center;
 }
 
 .results-table th, .results-table td {

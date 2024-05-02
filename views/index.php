@@ -15,20 +15,20 @@
     </head>
 
     <body class="content">
-        <fieldset class="header-footer">
+        <fieldset class="footer__header">
             <legend>Nagłówek z grafiką - slajder z grafikami najnowszych wydarzeń(w tym tygodniu). Poszczególne zdjęcia przenoszą do opisu eventu.</legend>
         </fieldset>
         
         <fieldset class="section">
-            <legend class="section-legend">EVENTSEARCH - wszystkie wydarzenia w jednym miejscu!</legend>
-            <?php if (!isset($_SESSION['user_id'])) { ?> <button onclick="window.location.href='login.php'" class='login-button'>ZALOGUJ</button> <?php } ?> 
-            <?php if (isset($_SESSION['user_id'])) { ?> <button onclick="window.location.href='../php_scripts/logout.php'" class='login-button'>WYLOGUJ</button> <?php } ?> 
+            <legend class="section__legend">EVENTSEARCH - wszystkie wydarzenia w jednym miejscu!</legend>
+            <?php if (!isset($_SESSION['user_id'])) { ?> <button onclick="window.location.href='login.php'" class='button__login'>ZALOGUJ</button> <?php } ?> 
+            <?php if (isset($_SESSION['user_id'])) { ?> <button onclick="window.location.href='../php_scripts/logout.php'" class='button__logout'>WYLOGUJ</button> <?php } ?> 
             <button onclick="window.location.href='profile.php'" class="profile-button">PROFIL</button>
             <button onclick="window.location.href='add_event_form.php'" class="add-button">DODAJ WYDARZENIE</button>
         </fieldset>
 
         <fieldset class="section">
-            <legend class="section-legend">Wyszukiwarka</legend>
+            <legend class="section__legend">Wyszukiwarka</legend>
             <!-- Tutaj dodaj pole do wyszukiwania -->
             <form class="search-form" method="get" action="">
                 <input type="text" name="search" class= "field-input" class="search-input" placeholder="Wyszukaj...">
@@ -38,7 +38,7 @@
 
     <!-- Filtry -->
         <fieldset class="section">
-        <legend class="section-legend">Filtry</legend>
+        <legend class="section__legend">Filtry</legend>
         <form class="filter-form" method="get" action="">
             <label hidden for="city-filter">Miasto:</label>
             <input type="text" id="city-filter" name="city" class="field-input" class="filter-input" placeholder="Miasto">
@@ -68,7 +68,7 @@
     </fieldset>
 
         <fieldset class="section">
-            <legend class="section-legend">Wyniki</legend>
+            <legend class="section__legend">Wyniki</legend>
             <table class="results-table">
                 <tr>
                     
