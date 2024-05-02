@@ -1,6 +1,6 @@
 <?php
 include '../php_scripts/connection.php';
-include '../php_scripts/session.php';
+include '../php_scripts/session_eventdetails.php';
 
 if (isset($_GET['event_id'])) {
     $event_id = $_GET['event_id'];
@@ -42,6 +42,10 @@ $conn->close();
 </head>
 
 <body class="content">
+    <!-- Nagłówek - info o zalogowanym użytkowniku -->
+<fieldset class="section"> 
+    <p>Użytkownik:<?php if(isset($_SESSION['login'])) {echo $_SESSION['login'] ;} ?></p> 
+</fieldset>
 <fieldset class="section" class="event_details">
     <legend class="section-legend">Szczegóły wydarzenia: <?php echo $event_data['name']; ?></legend>
     <table class="results-table">
