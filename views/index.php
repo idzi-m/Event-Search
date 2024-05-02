@@ -32,7 +32,7 @@
             <!-- Tutaj dodaj pole do wyszukiwania -->
             <form class="search-form" method="get" action="">
                 <input type="text" name="search" class= "field-input" class="search-input" placeholder="Wyszukaj...">
-                <button type="submit" formmethod="get" class="search-button">SZUKAJ</button>
+                <button type="submit" formmethod="get" class="button__search">SZUKAJ</button>
             </form>
         </fieldset>
 

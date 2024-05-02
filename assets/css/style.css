@@ -91,7 +91,7 @@ button:active {
     padding: 8px;
     background-color: #a76e28;
 }
-.button__edit, .search-button {
+.button__edit, .button__search {
     padding: 8px;
     background-color: #18e7ba;
 }
