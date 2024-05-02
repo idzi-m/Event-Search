@@ -1,5 +1,6 @@
 <?php
 include '../../php_scripts/connection.php';
+include '../../php_scripts/session.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $event_id = $_POST['event_id'];
@@ -11,6 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $price = $_POST['eventPrice'];  
     $shortDesc = $_POST['eventShortDesc'];  
     $longDesc = $_POST['eventLongDesc'];    
+    $creator_id = $_SESSION['user_id'];
     // Sprawdzenie, który przycisk został kliknięty
     if (isset($_POST['edit'])) {
         // Wywołanie stored procedure 'add_event'

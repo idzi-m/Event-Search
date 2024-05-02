@@ -1,5 +1,6 @@
 <?php
 include '../php_scripts/connection.php';
+include '../php_scripts/session.php';
 
 if (isset($_GET['event_id'])) {
     $event_id = $_GET['event_id'];
@@ -43,7 +44,7 @@ $conn->close();
         <input class="field-input" type="textarea" name="eventShortDesc" value="<?php echo $event_data['short_desc']; ?>" placeholder="Krótki opis"><br>
         <input class="field-input" type="textarea" name="eventLongDesc" value="<?php echo $event_data['long_desc']; ?>" placeholder="Długi opis wydarzenia"><br>
 </fieldset>
-<fieldset class="section">
+<fieldset class="section section__action">
     <legend class="section-legend">Akcje</legend>
         <button class="button__edit" type="submit" name="edit">ZAPISZ</button>
         <button type="reset" class="button__clear">RESETUJ FORMULARZ</button>

@@ -1,5 +1,6 @@
 <?php
 include '../php_scripts/connection.php';
+include '../php_scripts/session.php';
 
 if (isset($_GET['event_id'])) {
     $event_id = $_GET['event_id'];
@@ -62,13 +63,13 @@ $conn->close();
     </table>
 </fieldset>
 
-<fieldset class="section">
+<fieldset class="section section__action">
     <legend class="section-legend">Akcje</legend>
     <button onclick="window.location.href='index.php'" class="button">POWRÓT DO LISTY WYDARZEŃ</button>
-    <button onclick="window.location.href='edit_event_form.php?event_id=<?php echo $event_data['id']; ?>'" class="button__edit">EDYTUJ WYDARZENIE</button>
+    <button <?php if(!isset($_SESSION['user_id']) || $_SESSION['user_id'] != $event_data['creator_id']) {echo "hidden";}?> onclick="window.location.href='edit_event_form.php?event_id=<?php echo $event_data['id']; ?>'" class="button__edit">EDYTUJ WYDARZENIE</button>
     <form action="../db_scripts/event/event_delete.php" method="post">
         <input type="hidden" name="event_id" value="<?php echo $event_data['id']; ?>">
-        <button type="submit" name="event_delete" class="button__delete" onclick="return confirm('Czy na pewno chcesz usunąć to wydarzenie?')">USUŃ WYDARZENIE</button>
+        <button <?php if(!isset($_SESSION['user_id']) || $_SESSION['user_id'] != $event_data['creator_id']) {echo "hidden";}?> type="submit" name="event_delete" class="button__delete" onclick="return confirm('Czy na pewno chcesz usunąć to wydarzenie?')">USUŃ WYDARZENIE</button>
     </form>
 </fieldset>
 

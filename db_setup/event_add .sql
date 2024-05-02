@@ -8,7 +8,8 @@ CREATE OR REPLACE PROCEDURE event_add(
     IN p_location VARCHAR(50), 
     IN p_cena REAL, 
     IN p_short_desc VARCHAR(300), 
-    IN p_long_desc VARCHAR(1000)
+    IN p_long_desc VARCHAR(1000),
+    IN p_creator_id INT
 )
 BEGIN
     INSERT INTO Events (
@@ -34,7 +35,7 @@ BEGIN
         p_cena, 
         p_short_desc, 
         p_long_desc, 
-        1, 
+        p_creator_id, 
         NOW(), 
         NOW()
     );

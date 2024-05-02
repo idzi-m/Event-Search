@@ -1,24 +1,6 @@
 <?php
 include '../php_scripts/connection.php';
-
-$message = "";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    $sql = "SELECT * FROM Users WHERE login='$username' AND password='$password'";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        // Użytkownik zalogowany pomyślnie, przekierowanie na stronę główną
-        header("Location: index.php");
-        exit();
-    } else {
-        $message = "Nieprawidłowa nazwa użytkownika lub hasło!";
-    }
-}
-$conn->close();
+include '../php_scripts/login_check.php';
 ?>
 
 <!DOCTYPE html>

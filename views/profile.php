@@ -1,10 +1,10 @@
 <?php
 include '../php_scripts/connection.php';
+include '../php_scripts/session.php';
 
 // Pobranie danych użytkownika
-//session_start();
-//$user_id = $_SESSION['user_id'];  // Zakładamy, że przechowujesz ID użytkownika w sesji po zalogowaniu
-$user_id = 1;  // Zakładamy, że ID użytkownika to 1
+$user_id = $_SESSION['user_id'];  // Zakładamy, że przechowujesz ID użytkownika w sesji po zalogowaniu
+//$user_id = 1;  // Zakładamy, że ID użytkownika to 1
 $sql_user = "SELECT * FROM Users WHERE id = $user_id";
 $result_user = $conn->query($sql_user);
 $user_data = $result_user->fetch_assoc();
@@ -29,7 +29,12 @@ $conn->close();
 <body class="content">
 <fieldset class="section">
     <legend class="section-legend">Profil użytkownika: <?php echo $user_data['first_name'] . ' ' . $user_data['last_name']; ?></legend>
-    <p>ID użytkownika: <?php echo $user_data['id']; ?></p>
+    <p>Login użytkownika: <?php echo $user_data['login']; ?></p>
+    <p>Miasto: Ponzań</p>
+    <p>NUmer telefonu: 34444134</p>
+    <p>Adres email: test@dsdasd</p>
+    <p>Data urodzenia: 1994-93-23</p>
+    <p>Płeć: test</p>
 </fieldset>
 
 <fieldset class="section">
@@ -69,7 +74,7 @@ $conn->close();
     </table>
 </fieldset>
 
-<fieldset class="section">
+<fieldset class="section section__action">
     <legend class="section-legend">Akcje</legend>
     <button onclick="window.location.href='index.php'" class="button">POWRÓT DO LISTY WYDARZEŃ</button>
 </fieldset>

@@ -19,7 +19,7 @@ include '../php_scripts/connection.php';
 
             <div class="form__group">
                 <label hidden for="name">Imię lub nick</label>
-                <input id="name" type="text" placeholder="Ladogin" minlength="3" maxlength="20" size="12" required autofocus class="field-input">
+                <input id="name" type="text" placeholder="Login" minlength="3" maxlength="20" size="12" required autofocus class="field-input">
             </div>
 
             <div class="form__group">
@@ -38,6 +38,16 @@ include '../php_scripts/connection.php';
             </div>
 
             <div class="form__group">
+                <label hidden for="miasto">Miasto</label>
+                <input id="miasto" type="text" class="field-input" placeholder="Miasto">
+            </div>
+
+            <div class="form__group">
+                <label hidden for="email">Email</label>
+                <input id="email" type="text" class="field-input" placeholder="Adres email">
+            </div>
+            
+            <div class="form__group">
                 <label hidden for="birth-date">Data urodzenia</label>
                 <input id="birth-date" type="date" min="1918-11-11" class="field-input">
             </div>
@@ -49,26 +59,26 @@ include '../php_scripts/connection.php';
 
                 <input id="man" type="radio" name="gender">
                 <label for="man">Mężczyzna</label>
+
+                <input id="nb" type="radio" name="gender">
+                <label for="nb">No-binary</label>
             </div>
 
             <div class="form__group">
                 <label for="file-field">Twój awatar:</label>
                 <input id="file-field" type="file" accept="image/*">
             </div>
-        </fieldset>
-
-        <fieldset class="section">
-            <legend class="section-legend">Ulubiony kolor</legend>
             <div class="form__group">
+                <label for="favorite-color">Ulubiony kolor:</label>
                 <input id="favorite-color" type="color" value="#000000" class="form_input">
             </div>
         </fieldset>
-
-        <div class="form__buttons">
+        <fieldset class="section section__action">
+            <legend class="section-legend">Akcje</legend>
             <button type="submit" class="button__edit">ZAPISZ</button>
             <button type="reset" class="button__clear">RESETUJ FORMULARZ</button>
             <button type="button" onclick="window.location.href='index.php'" class="button">ANULUJ</button>
-        </div>
+        </fieldset>
     </form>
 </body>
 </html>

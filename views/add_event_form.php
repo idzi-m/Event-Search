@@ -1,3 +1,6 @@
+<?php
+include '../php_scripts/session.php';
+?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -21,7 +24,7 @@
     <input class="field-input" type="textarea" name="eventLongDesc" placeholder="Długi opis wydarzenia"><br>
 
 </fieldset>
-<fieldset class="section">
+<fieldset class="section section__action">
     <legend class="section-legend">Akcje</legend>        
     <button class="button__edit" type="submit" name="add">DODAJ</button>
     <button type="reset" class="button__clear">RESETUJ FORMULARZ</button>

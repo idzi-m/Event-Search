@@ -1,5 +1,6 @@
     <?php
     include '../php_scripts/connection.php';
+    include '../php_scripts/session_index.php';
     include '../db_scripts/event/event_search.php';
     ?>
 
@@ -20,7 +21,8 @@
         
         <fieldset class="section">
             <legend class="section-legend">EVENTSEARCH - wszystkie wydarzenia w jednym miejscu!</legend>
-            <button onclick="window.location.href='login.php'" class='login-button'>LOGIN</button> 
+            <?php if (!isset($_SESSION['user_id'])) { ?> <button onclick="window.location.href='login.php'" class='login-button'>ZALOGUJ</button> <?php } ?> 
+            <?php if (isset($_SESSION['user_id'])) { ?> <button onclick="window.location.href='../php_scripts/logout.php'" class='login-button'>WYLOGUJ</button> <?php } ?> 
             <button onclick="window.location.href='profile.php'" class="profile-button">PROFIL</button>
             <button onclick="window.location.href='add_event_form.php'" class="add-button">DODAJ WYDARZENIE</button>
         </fieldset>
