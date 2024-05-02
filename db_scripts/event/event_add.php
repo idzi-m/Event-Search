@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Sprawdzenie, który przycisk został kliknięty
     if (isset($_POST['add'])) {
         // Wywołanie stored procedure 'add_event'
-        $stmt = $conn->prepare("CALL event_add(?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt = $conn->prepare("CALL event_add(?, ?, ?, ?, ?, ?, ?, ?, ?)");
         $stmt->bind_param("sssssissi", $eventName, $eventDate, $city, $type, $location, $price, $shortDesc, $longDesc, $creator_id);
 
         if ($stmt->execute()) {
