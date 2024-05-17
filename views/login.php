@@ -14,23 +14,23 @@ include '../php_scripts/login_check.php';
 </head>
 
 <body class="content">
-<fieldset class="section section__login">
-    <legend class="section__legend">EVENTSEARCH - wszystkie wydarzenia w jednym miejscu!<br> Nie masz konta? Zarejestruj się!</legend>
+<fieldset class="section section_login">
+    <legend class="section_legend">EVENTSEARCH - wszystkie wydarzenia w jednym miejscu!<br> Nie masz konta? Zarejestruj się!</legend>
     <button onclick="window.location.href='register.php'" class="button">REJESTRACJA</button>
 </fieldset>
 
-<fieldset class="section section__login">
-    <legend class="section__legend">Logowanie</legend>
-    <form method="post" action="" class="form__login">
-        <div class="form__group">
+<fieldset class="section section_login">
+    <legend class="section_legend">Logowanie</legend>
+    <form method="post" action="" class="form_login">
+        <div class="form_group">
             <label hidden for="login">Nazwa użytkownika:</label>
-            <input type="text" name="username" class="field-input" placeholder="Nazwa użytkownika" required>
+            <input type="text" name="username" class="field_input" placeholder="Nazwa użytkownika" required>
         </div>
-        <div class="form__group">
+        <div class="form_group">
             <label hidden for="password">Hasło:</label>
-            <input type="password" name="password" class="field-input" placeholder="Hasło" required>
+            <input type="password" name="password" class="field_input" placeholder="Hasło" required>
         </div>
-        <div class="form__group">
+        <div class="form_group">
             <button type="submit" class="button">ZALOGUJ</button>
         </div>
     </form>
@@ -41,9 +41,9 @@ include '../php_scripts/login_check.php';
     ?>
 </fieldset>
 
-<fieldset class="section section__login">
-    <legend class="section__legend">Akcje</legend>
+<fieldset class="section section_login">
+    <legend class="section_legend">Akcje</legend>
     <button onclick="window.location.href='index.php'" class="button">POWRÓT DO LISTY WYDARZEŃ</button>
 </fieldset>
 </body>
-</html>
+</html> 

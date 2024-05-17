@@ -33,21 +33,21 @@ $conn->close();
 <body class='content'>
 <form method="post" action="../db_scripts/event/event_update.php">
 <fieldset class="section">
-    <legend class="section__legend">Dodaj nowe wydarzenie!</legend>        
-        <input class="field-input" type="hidden" name="event_id" value="<?php echo $event_data['id']; ?>">
-        <input class="field-input" type="text" name="eventName" value="<?php echo $event_data['name']; ?>" placeholder="Nazwa wydarzenia" required ><br>
-        <input class="field-input" type="datetime-local" name="eventDate" value="<?php echo $event_data['event_date']; ?>" placeholder="Data i godzina wydarzenia" required ><br>
-        <input class="field-input" type="text" name="eventCity" value="<?php echo $event_data['event_city']; ?>" placeholder="Miasto" required ><br>
-        <input class="field-input" type="text" name="eventType" value="<?php echo $event_data['type']; ?>" placeholder="Typ wydarzenia"><br>
-        <input class="field-input" type="text" name="eventLocation" value="<?php echo $event_data['location']; ?>" placeholder="Lokalizacja" required ><br>
-        <input class="field-input" type="text" name="eventPrice" value="<?php echo $event_data['cena']; ?>" placeholder="Cena"><br>
-        <input class="field-input" type="textarea" name="eventShortDesc" value="<?php echo $event_data['short_desc']; ?>" placeholder="Krótki opis"><br>
-        <input class="field-input" type="textarea" name="eventLongDesc" value="<?php echo $event_data['long_desc']; ?>" placeholder="Długi opis wydarzenia"><br>
+    <legend class="section_legend">Dodaj nowe wydarzenie!</legend>        
+        <input class="field_input" type="hidden" name="event_id" value="<?php echo $event_data['id']; ?>">
+        <input class="field_input" type="text" name="eventName" value="<?php echo $event_data['name']; ?>" placeholder="Nazwa wydarzenia" required ><br>
+        <input class="field_input" type="datetime-local" name="eventDate" value="<?php echo $event_data['event_date']; ?>" placeholder="Data i godzina wydarzenia" required ><br>
+        <input class="field_input" type="text" name="eventCity" value="<?php echo $event_data['event_city']; ?>" placeholder="Miasto" required ><br>
+        <input class="field_input" type="text" name="eventType" value="<?php echo $event_data['type']; ?>" placeholder="Typ wydarzenia"><br>
+        <input class="field_input" type="text" name="eventLocation" value="<?php echo $event_data['location']; ?>" placeholder="Lokalizacja" required ><br>
+        <input class="field_input" type="text" name="eventPrice" value="<?php echo $event_data['cena']; ?>" placeholder="Cena"><br>
+        <input class="field_input" type="textarea" name="eventShortDesc" value="<?php echo $event_data['short_desc']; ?>" placeholder="Krótki opis"><br>
+        <input class="field_input" type="textarea" name="eventLongDesc" value="<?php echo $event_data['long_desc']; ?>" placeholder="Długi opis wydarzenia"><br>
 </fieldset>
-<fieldset class="section section__action">
-    <legend class="section__legend">Akcje</legend>
-        <button class="button__edit" type="submit" name="edit">ZAPISZ</button>
-        <button type="reset" class="button__clear">RESETUJ FORMULARZ</button>
+<fieldset class="section section_action">
+    <legend class="section_legend">Akcje</legend>
+        <button class="button_edit" type="submit" name="edit">ZAPISZ</button>
+        <button type="reset" class="button_clear">RESETUJ FORMULARZ</button>
         <button class="button" onclick="window.location.href='event_details.php?event_id=<?php echo $event_data['id']; ?>'" name="cancel">ANULUJ</button>
 </fieldset>
 </form>

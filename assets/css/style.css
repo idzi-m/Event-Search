@@ -13,7 +13,7 @@
     background-repeat: no-repeat;
 }
 /* Stylowanie nagłówka i stopki */
-.footer__header {
+.footer_header {
     background-color: #f0f0f0;
     padding: 20px;
     text-align: center;
@@ -34,7 +34,7 @@
 }
 
 /* Stylowanie legend */
-.section__legend {
+.section_legend {
     font-weight: bold;
     color: rgb(6, 36, 229);
     margin: auto;
@@ -44,13 +44,13 @@
 
 }
 
-.section__login, .form__group{
+.section_login, .form_group{
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
-.section__action {
+.section_action {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,30 +77,30 @@ button:active {
     background-color: #00aab3;
 }
 
-.field-input {
+.field_input {
     padding: 8px;
     width: 200px;
     background-color: rgba(255, 255, 255, 0.7);
 }   
 /* Stylowanie formularza wyszukiwania */
-.search-form {
+.search_form {
     display: inline-block;
 }
 
-.button__clear, .button__logout{
+.button_clear, .button__logout{
     padding: 8px;
     background-color: #a76e28;
 }
-.button__edit, .button__search {
+.button_edit, .button__search {
     padding: 8px;
     background-color: #18e7ba;
 }
-.button__delete{
+.button_delete{
     padding: 8px;
     background-color: #e0d314;
 }
 /* Stylowanie tabeli wyników */
-.results-table {
+.results_table {
     border-collapse: collapse;
     background-color:rgba(49, 180, 228, 0.5);
     overflow: hidden;
@@ -108,7 +108,7 @@ button:active {
     text-align: center;
 }
 
-.results-table th, .results-table td {
+.results_table th, .results_table td {
     padding: 10px;
     border: 2px solid #24024c;
     font: bold 14px Arial, sans-serif;
@@ -126,7 +126,7 @@ a:hover {
 }
 
 /*Styl okna detali*/
-.content__event-details {
+.content_event-details {
     background-color: rgba(37, 182, 184, 0.5);
     padding: 10px;
     border: 2px solid #24024c;

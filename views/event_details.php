@@ -47,35 +47,35 @@ $conn->close();
     <p>Użytkownik:<?php if(isset($_SESSION['login'])) {echo $_SESSION['login'] ;} ?></p> 
 </fieldset>
 <fieldset class="section" class="event_details">
-    <legend class="section__legend">Szczegóły wydarzenia: <?php echo $event_data['name']; ?></legend>
-    <table class="results-table">
+    <legend class="section_legend">Szczegóły wydarzenia: <?php echo $event_data['name']; ?></legend>
+    <table class="results_table">
         <tr>
-            <td class="event-details-image" rowspan="2">
+            <td class="event_details-image" rowspan="2">
                 <!-- miejsce na zdjęcie wydarzenia -->
             </td>
             <td class="event-details-data">
-                <p class="field-label">Data wydarzenia: <?php echo $event_data['event_date']; ?></p>
-                <p class="field-label">Miasto: <?php echo $event_data['event_city']; ?></p>
-                <p class="field-label">Typ: <?php echo $event_data['type']; ?></p>
-                <p class="field-label">Lokalizacja: <?php echo $event_data['location']; ?></p>
-                <p class="field-label">Krótki opis: <?php echo $event_data['short_desc']; ?></p>
-                <p class="field-label">Długi opis: <?php echo $event_data['long_desc']; ?></p>
-                <p class="field-label">Cena: <?php echo $event_data['cena']; ?></p>
-                <p class="field-label">Twórca: <?php echo $creator; ?></p>
+                <p class="field_label">Data wydarzenia: <?php echo $event_data['event_date']; ?></p>
+                <p class="field_label">Miasto: <?php echo $event_data['event_city']; ?></p>
+                <p class="field_label">Typ: <?php echo $event_data['type']; ?></p>
+                <p class="field_label">Lokalizacja: <?php echo $event_data['location']; ?></p>
+                <p class="field_label">Krótki opis: <?php echo $event_data['short_desc']; ?></p>
+                <p class="field_label">Długi opis: <?php echo $event_data['long_desc']; ?></p>
+                <p class="field_label">Cena: <?php echo $event_data['cena']; ?></p>
+                <p class="field_label">Twórca: <?php echo $creator; ?></p>
             </td>
         </tr>
     </table>
 </fieldset>
 
-<fieldset class="section section__action">
-    <legend class="section__legend">Akcje</legend>
+<fieldset class="section section_action">
+    <legend class="section_legend">Akcje</legend>
     <button onclick="window.location.href='index.php'" class="button">POWRÓT DO LISTY WYDARZEŃ</button>
-    <button <?php if(!isset($_SESSION['user_id']) || $_SESSION['user_id'] != $event_data['creator_id']) {echo "hidden";}?> onclick="window.location.href='edit_event_form.php?event_id=<?php echo $event_data['id']; ?>'" class="button__edit">EDYTUJ WYDARZENIE</button>
+    <button <?php if(!isset($_SESSION['user_id']) || $_SESSION['user_id'] != $event_data['creator_id']) {echo "hidden";}?> onclick="window.location.href='edit_event_form.php?event_id=<?php echo $event_data['id']; ?>'" class="button_edit">EDYTUJ WYDARZENIE</button>
     <form action="../db_scripts/event/event_delete.php" method="post">
         <input type="hidden" name="event_id" value="<?php echo $event_data['id']; ?>">
-        <button <?php if(!isset($_SESSION['user_id']) || $_SESSION['user_id'] != $event_data['creator_id']) {echo "hidden";}?> type="submit" name="event_delete" class="button__delete" onclick="return confirm('Czy na pewno chcesz usunąć to wydarzenie?')">USUŃ WYDARZENIE</button>
+        <button <?php if(!isset($_SESSION['user_id']) || $_SESSION['user_id'] != $event_data['creator_id']) {echo "hidden";}?> type="submit" name="event_delete" class="button_delete" onclick="return confirm('Czy na pewno chcesz usunąć to wydarzenie?')">USUŃ WYDARZENIE</button>
     </form>
 </fieldset>
 
-</body>
+</body> 
 </html>

@@ -28,18 +28,18 @@ $conn->close();
 
 <body class="content">
 <fieldset class="section">
-    <legend class="section__legend">Profil użytkownika: <?php echo $user_data['first_name'] . ' ' . $user_data['last_name']; ?></legend>
+    <legend class="section_legend">Profil użytkownika: <?php echo $user_data['first_name'] . ' ' . $user_data['last_name']; ?></legend>
     <p>Login użytkownika: <?php echo $user_data['login']; ?></p>
     <p>Miasto: Ponzań</p>
     <p>NUmer telefonu: 34444134</p>
     <p>Adres email: test@dsdasd</p>
     <p>Data urodzenia: 1994-93-23</p>
     <p>Płeć: test</p>
-</fieldset>
+</fieldset> 
 
 <fieldset class="section">
-    <legend class="section__legend">Lista wydarzeń utworzonych przez użytkownika</legend>
-    <table class="results-table">
+    <legend class="section_legend">Lista wydarzeń utworzonych przez użytkownika</legend>
+    <table class="results_table">
         <tr>
             <th>ID</th>
             <th>Nazwa wydarzenia</th>
@@ -74,8 +74,8 @@ $conn->close();
     </table>
 </fieldset>
 
-<fieldset class="section section__action">
-    <legend class="section__legend">Akcje</legend>
+<fieldset class="section section_action">
+    <legend class="section_legend">Akcje</legend>
     <button onclick="window.location.href='index.php'" class="button">POWRÓT DO LISTY WYDARZEŃ</button>
 </fieldset>
 
