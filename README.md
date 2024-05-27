@@ -1,18 +1,22 @@
-**Wyszukiwarka Eventów**
+## Event Search
 
-Wyszukiwarka Eventów jest aplikacją webową umożliwiającą użytkownikom przeszukiwanie i przeglądanie różnych wydarzeń. 
-Projekt jest budowany w ramach nauki html, css, php i js.
+Event Search is a simple search engine allowing to browse, add and manage events.
+Project is build using xampp as a practicall way to learn basics of HTML 5, CSS and JavaScript.
 
-Funkcje
-Wyszukiwanie eventów według kategorii, daty i lokalizacji
-Przeglądanie szczegółowych informacji o wybranym wydarzeniu.
+## Functionalities
 
-Technologie
+Browse, filter and view details of various events.
+Adding, editing and delating events.
+Managing user accounts and events created by user.
+
+## Technologies
+
 Frontend: HTML, CSS, JavaScript
 Backend: PHP
 Baza danych: MySQL
 
-Dostęp do projektu:
-1. przeniesienie całego folderu do odpowiedniego folderu xampp (xampp/htdocs)
-2. import bazy danych poprzez plik zbiorczy dostępy w folderze db_setup (db_setup/db_full.sql)
-3. otwarcie głównej strony aplikacji, dostępnej w folderze views (views/index.php)
+## Access to project:
+
+1. Move project folder to correct xampp folder (xampp/htdocs)
+2. Import database using file db_setup (db_setup/db_full.sql)
+3. Open mani mage of application (views/index.php)
