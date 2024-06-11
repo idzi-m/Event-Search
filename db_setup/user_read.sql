@@ -11,7 +11,7 @@ BEGIN
     second_name,
     last_name,
     is_deleted,
-    login,
+    login
     FROM Events
     WHERE id = p_id;
 END //
