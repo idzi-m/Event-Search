@@ -3,7 +3,7 @@ include '../php_scripts/connection.php';
 include '../php_scripts/session.php';
 
 if (isset($_GET['event_id'])) {
-    $event_id = $_GET['event_id'];
+    $event_id = htmlspecialchars($_GET['event_id']);
     
     $sql = "SELECT * FROM Events WHERE id = $event_id AND is_deleted = 0";
     $result = $conn->query($sql);

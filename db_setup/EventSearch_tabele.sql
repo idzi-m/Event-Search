@@ -1,10 +1,11 @@
 USE eventsearch;
 begin;
 CREATE TABLE Users(
-     id INT AUTO_INCREMENT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(50),
     second_name VARCHAR(50),
     last_name VARCHAR(50),
+    is_deleted BOOLEAN,
     login VARCHAR(50),
     pass VARCHAR(50)
 );
