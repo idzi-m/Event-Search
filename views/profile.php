@@ -75,12 +75,21 @@ $conn->close();
 
 <fieldset class="section section_action">
     <legend class="section_legend">Akcje</legend>
-    <button onclick="window.location.href='index.php'" class="button">POWRÓT DO LISTY WYDARZEŃ</button>
-    <button <?php if(!isset($_SESSION['user_id']) || $_SESSION['user_id'] != $user_data['id']) {echo "hidden";}?> onclick="window.location.href='edit_user_form.php?user_id=<?php echo $user_data['id']; ?>'" class="button_edit">EDYTUJ DANE UŻYTKOWNIKA</button>
+    <ul>
+        <li><button onclick="window.location.href='index.php'" class="button">POWRÓT DO LISTY WYDARZEŃ</button></li>
+        <li><button onclick="window.location.href='edit_user_form.php?user_id=<?php echo $user_data['id']; ?>'" class="button_edit">EDYTUJ DANE UŻYTKOWNIKA</button></li>
+        <li>
+            <form action="../db_scripts/user/user_delete.php" method="post">
+                <input type="hidden" name="user_id" value="<?php echo $user_data['id']; ?>">
+                <button type="submit" name="user_delete" class="button_delete" onclick="return confirm('Czy na pewno chcesz usunąć swoje konto?')">USUŃ KONTO</button>
+            </form>
+        </li>
+    <!-- <button onclick="window.location.href='index.php'" class="button">POWRÓT DO LISTY WYDARZEŃ</button>
+    <button <?php //if(!isset($_SESSION['user_id']) || $_SESSION['user_id'] != $user_data['id']) {echo "hidden";}?> onclick="window.location.href='edit_user_form.php?user_id=<?php echo $user_data['id']; ?>'" class="button_edit">EDYTUJ DANE UŻYTKOWNIKA</button>
     <form action="../db_scripts/user/user_delete.php" method="post">
-        <input type="hidden" name="user_id" value="<?php echo $user_data['id']; ?>">
-        <button <?php if(!isset($_SESSION['user_id']) || $_SESSION['user_id'] != $user_data['id']) {echo "hidden";}?> type="submit" name="user_delete" class="button_delete" onclick="return confirm('Czy na pewno chcesz usunąć swoje konto?')">USUŃ KONTO</button>
-    </form>
+        <input type="hidden" name="user_id" value="<?php //echo $user_data['id']; ?>">
+        <button <?php //if(!isset($_SESSION['user_id']) || $_SESSION['user_id'] != $user_data['id']) {echo "hidden";}?> type="submit" name="user_delete" class="button_delete" onclick="return confirm('Czy na pewno chcesz usunąć swoje konto?')">USUŃ KONTO</button>
+    </form> -->
 </fieldset>
 
 </body>
