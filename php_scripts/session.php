@@ -3,7 +3,7 @@
 session_start();
 
 // Sprawdź, czy sesja istnieje
-if(isset($_SESSION['login'])) {echo "<fieldset class=\"section\"> <p>Użytkownik:".$_SESSION['login'] ."</p> </fieldset>";}     
+if(isset($_SESSION['login'])) {$user_message = "Użytkownik:".$_SESSION['login'];}     
 if (!isset($_SESSION['last_activity'])) {
     header("Location: login.php");
 } else {

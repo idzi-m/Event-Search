@@ -13,11 +13,15 @@
     background-repeat: no-repeat;
 }
 /* Stylowanie nagłówka i stopki */
-.footer_header {
-    background-color: #f0f0f0;
-    padding: 20px;
+.header {
     text-align: center;
+    justify-content: center;
+    width: 0.98vm;
     margin-bottom: 20px;
+    padding: 5px;
+    border: 1px solid #080540;
+    background-color: rgba(37, 182, 184, 0.5);
+    border-radius: 8px; /* Zaokrąglone krawędzie */
 }
 
 /* Stylowanie sekcji */
@@ -132,4 +136,18 @@ a:hover {
     border: 2px solid #24024c;
     border-radius: 8px;
     margin-bottom: 20px;
+}
+/* Stylizacja dla listy nawigacyjnej */
+.list-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.list-li {
+    display: block;
+    margin: 0px;
 }

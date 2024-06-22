@@ -42,11 +42,11 @@ $conn->close();
 </head>
 
 <body class="content">
-    <!-- Nagłówek - info o zalogowanym użytkowniku -->
-<fieldset class="section"> 
-    <p>Użytkownik:<?php if(isset($_SESSION['login'])) {echo $_SESSION['login'] ;} ?></p> 
-</fieldset>
-<fieldset class="section" class="event_details">
+    <header class="header">
+            <h1>Wyszukiwarka Eventów</h1>
+            <p><?php echo $user_message; ?></p>
+        </header>
+    <fieldset class="section" class="event_details">
     <legend class="section_legend">Szczegóły wydarzenia: <?php echo $event_data['name']; ?></legend>
     <table class="results_table">
         <tr>

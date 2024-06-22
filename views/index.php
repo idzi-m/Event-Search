@@ -16,12 +16,21 @@
 
     <body class="content">
         
+        <header class="header">
+            <h1>Wyszukiwarka Eventów</h1>
+            <p><?php echo $user_message; ?></p>
+        </header>
+
         <fieldset class="section">
             <legend class="section_legend">EVENTSEARCH - wszystkie wydarzenia w jednym miejscu!</legend>
-            <?php if (!isset($_SESSION['user_id'])) { ?> <button onclick="window.location.href='login.php'" class='button_login'>ZALOGUJ</button> <?php } ?> 
-            <?php if (isset($_SESSION['user_id'])) { ?> <button onclick="window.location.href='../php_scripts/logout.php'" class='button_logout'>WYLOGUJ</button> <?php } ?> 
-            <button onclick="window.location.href='profile.php'" class="button_profile">PROFIL</button>
-            <button onclick="window.location.href='add_event_form.php'" class="button_add">DODAJ WYDARZENIE</button>
+        <nav id="nav" class="navigation">    
+            <ul class="list-buttons">
+            <li class="list-li"><?php if (!isset($_SESSION['user_id'])) { ?> <button onclick="window.location.href='login.php'" class='button_login'>ZALOGUJ</button> <?php } ?></li>    
+            <li class="list-li"><?php if (isset($_SESSION['user_id'])) { ?> <button onclick="window.location.href='../php_scripts/logout.php'" class='button_logout'>WYLOGUJ</button> <?php } ?></li> 
+            <li class="list-li"><button onclick="window.location.href='profile.php'" class="button_profile">PROFIL</button></li>
+            <li class="list-li"><button onclick="window.location.href='add_event_form.php'" class="button_add">DODAJ WYDARZENIE</button></li>
+            </ul>
+        </nav>
         </fieldset> 
 
         <fieldset class="section">
