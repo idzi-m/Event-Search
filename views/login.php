@@ -50,5 +50,9 @@ include '../php_scripts/login_check.php';
     <legend class="section_legend">Akcje</legend>
     <button onclick="window.location.href='index.php'" class="button">POWRÓT DO LISTY WYDARZEŃ</button>
 </fieldset>
+<footer class="footer">
+        <p>&copy; 2024 EventSearch.</p>
+        <p>Find me on <a href="https://github.com/idzi-m" target="_blank">GitHub</a></p>
+    </footer>
 </body>
 </html> 

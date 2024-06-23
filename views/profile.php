@@ -83,5 +83,9 @@ $conn->close();
         ?>
     </div>
 </fieldset>
+<footer class="footer">
+        <p>&copy; 2024 EventSearch.</p>
+        <p>Find me on <a href="https://github.com/idzi-m" target="_blank">GitHub</a></p>
+    </footer>
 </body>
 </html>

@@ -46,6 +46,11 @@ include '../php_scripts/session_index.php';
         <?php include '../db_scripts/event/event_search.php'; ?>
     </fieldset>
 
+    <footer class="footer">
+        <p>&copy; 2024 EventSearch.</p>
+        <p>Find me on <a href="https://github.com/idzi-m" target="_blank">GitHub</a></p>
+    </footer>
+
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

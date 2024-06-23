@@ -84,5 +84,9 @@ include '../php_scripts/connection.php';
         <nav>
         </fieldset>
     </form>
+    <footer class="footer">
+        <p>&copy; 2024 EventSearch.</p>
+        <p>Find me on <a href="https://github.com/idzi-m" target="_blank">GitHub</a></p>
+    </footer>
 </body>
 </html>

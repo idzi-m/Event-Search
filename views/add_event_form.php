@@ -2,7 +2,7 @@
 include '../php_scripts/session.php';
 ?>
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" class="document">
 <head>
     <meta charset="UTF-8">
     <title>Dodaj nowe wydarzenie</title>
@@ -36,5 +36,9 @@ include '../php_scripts/session.php';
     <button class="button" onclick="window.location.href='index.php'" name="cancel">ANULUJ</button>
 </fieldset>
 </form>
+<footer class="footer">
+        <p>&copy; 2024 EventSearch.</p>
+        <p>Find me on <a href="https://github.com/idzi-m" target="_blank">GitHub</a></p>
+    </footer>
 </body>
 </html>

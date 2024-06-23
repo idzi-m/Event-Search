@@ -23,7 +23,7 @@ $conn->close();
 ?> 
 
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" class="document">
 <head>
     <meta charset="UTF-8">
     <title>Dodaj nowe wydarzenie</title>
@@ -60,6 +60,10 @@ $conn->close();
     </ul>
     </nav>
     </fieldset>
+    <footer class="footer">
+        <p>&copy; 2024 EventSearch.</p>
+        <p>Find me on <a href="https://github.com/idzi-m" target="_blank">GitHub</a></p>
+    </footer>
 </form>
 </body>
 </html>

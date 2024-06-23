@@ -72,6 +72,10 @@ $conn->close();
             <button <?php if(!isset($_SESSION['user_id']) || $_SESSION['user_id'] != $event_data['creator_id']) {echo "hidden";}?> type="submit" name="event_delete" class="button_delete" onclick="return confirm('Czy na pewno chcesz usunąć to wydarzenie?')">USUŃ WYDARZENIE</button>
         </form>
     </fieldset>
+    <footer class="footer">
+        <p>&copy; 2024 EventSearch.</p>
+        <p>Find me on <a href="https://github.com/idzi-m" target="_blank">GitHub</a></p>
+    </footer>
 
 </body> 
 </html>
