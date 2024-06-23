@@ -11,7 +11,13 @@ BEGIN
     second_name,
     last_name,
     is_deleted,
-    login
+    login,
+    pass,
+    city,
+    phone,
+    email,
+    birth_date,
+    gender
     FROM Events
     WHERE id = p_id;
 END //

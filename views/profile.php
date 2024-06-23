@@ -49,13 +49,13 @@ $conn->close();
     <nav id="nav_profile" class="navigation">
         <ul class="navigation-list-buttons">
             <li class="navigation-list-li"><button onclick="window.location.href='index.php'" class="button">POWRÓT DO LISTY WYDARZEŃ</button></li>
-            <li class="navigation-list-li"><button onclick="window.location.href='edit_user_form.php?user_id=<?php echo $user_data['id']; ?>'" class="button_edit">EDYTUJ DANE UŻYTKOWNIKA</button></li>
+            <!-- <li class="navigation-list-li"><button onclick="window.location.href='edit_user_form.php?user_id=<?php echo $user_data['id']; ?>'" class="button_edit">EDYTUJ DANE UŻYTKOWNIKA</button></li>
             <li class="navigation-list-li">
                 <form action="../db_scripts/user/user_delete.php" method="post">
                     <input type="hidden" name="user_id" value="<?php echo $user_data['id']; ?>">
                     <button type="submit" name="user_delete" class="button_delete" onclick="return confirm('Czy na pewno chcesz usunąć swoje konto?')">USUŃ KONTO</button>
                 </form>
-            </li>
+            </li> -->
         </ul>
     </nav>
 </fieldset>
