@@ -19,4 +19,4 @@ Baza danych: MySQL
 
 1. Move project folder to correct xampp folder (xampp/htdocs)
 2. Import database using file db_setup (db_setup/db_full.sql)
-3. Open mani mage of application (views/index.php)
+3. Open main mage of application (views/index.php)
