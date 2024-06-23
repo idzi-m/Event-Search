@@ -14,8 +14,13 @@ include '../php_scripts/login_check.php';
 </head>
 
 <body class="content">
+    
+<header class="header">
+        <h1>EventSearch - Wyszukiwarka eventów!</h1>
+</header>
+
 <fieldset class="section section_login">
-    <legend class="section_legend">EVENTSEARCH - wszystkie wydarzenia w jednym miejscu!<br> Nie masz konta? Zarejestruj się!</legend>
+    <legend class="section_legend">Nie masz konta? Zarejestruj się!</legend>
     <button onclick="window.location.href='register.php'" class="button">REJESTRACJA</button>
 </fieldset>
 

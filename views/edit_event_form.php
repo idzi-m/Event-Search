@@ -31,6 +31,12 @@ $conn->close();
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body class='content'>
+
+<header class="header">
+        <h1>EventSearch - Wyszukiwarka eventów!</h1>
+        <p><?php echo $user_message; ?></p>
+</header>
+
 <form method="post" action="../db_scripts/event/event_update.php">
 <fieldset class="section">
     <legend class="section_legend">Dodaj nowe wydarzenie!</legend>        
@@ -46,10 +52,14 @@ $conn->close();
 </fieldset>
 <fieldset class="section section_action">
     <legend class="section_legend">Akcje</legend>
-        <button class="button_edit" type="submit" name="edit">ZAPISZ</button>
-        <button type="reset" class="button_clear">RESETUJ FORMULARZ</button>
-        <button class="button" onclick="window.location.href='event_details.php?event_id=<?php echo $event_data['id']; ?>'" name="cancel">ANULUJ</button>
-</fieldset>
+    <nav id="nav_profile" class="navigation">
+            <ul class="navigation-list-buttons">
+            <li class="navigation-list-li"><button class="button_edit" type="submit" name="edit">ZAPISZ</button></li>
+            <li class="navigation-list-li"><button type="reset" class="button_clear">RESETUJ FORMULARZ</button></li>
+            <li class="navigation-list-li"><button class="button" onclick="window.location.href='event_details.php?event_id=<?php echo $event_data['id']; ?>'" name="cancel">ANULUJ</button></li>
+    </ul>
+    </nav>
+    </fieldset>
 </form>
 </body>
 </html>

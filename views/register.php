@@ -12,13 +12,17 @@ include '../php_scripts/connection.php';
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body class="content">
+    
+    <header class="header">
+        <h1>EventSearch - Wyszukiwarka eventów!</h1>
+    </header>
+
     <form action="script.php" autocomplete="on" method="post" enctype="multipart/form-data" class="form_register">
-        <h2 class="form_title">Utwórz konto</h2>
         <fieldset class="section">
             <legend class="section_legend">Twoje dane:</legend>
 
             <div class="form_group">
-                <label hidden for="name">Imię lub nick</label>
+                <label hidden for="name">Login</label>
                 <input id="name" type="text" placeholder="Login" minlength="3" maxlength="20" size="12" required autofocus class="field_input">
             </div>
 
@@ -54,20 +58,16 @@ include '../php_scripts/connection.php';
 
             <div class="form_group">
                 <label>Płeć:</label>
-                <input id="woman" type="radio" name="gender" checked>
-                <label for="woman">Kobieta</label>
-
-                <input id="man" type="radio" name="gender">
-                <label for="man">Mężczyzna</label>
-
-                <input id="nb" type="radio" name="gender">
-                <label for="nb">No-binary</label>
+                <input id="woman" type="radio" name="gender" checked><label for="woman">Kobieta</label>
+                <input id="man" type="radio" name="gender"><label for="man">Mężczyzna</label>
+                <input id="nb" type="radio" name="gender"><label for="nb">No-binary</label>
             </div>
 
             <div class="form_group">
                 <label for="file-field">Twój awatar:</label>
                 <input id="file-field" type="file" accept="image/*">
             </div>
+
             <div class="form_group">
                 <label for="favorite-color">Ulubiony kolor:</label>
                 <input id="favorite-color" type="color" value="#000000" class="form_input">
@@ -75,9 +75,13 @@ include '../php_scripts/connection.php';
         </fieldset>
         <fieldset class="section section_action">
             <legend class="section_legend">Akcje</legend>
-            <button type="submit" class="button_edit">ZAPISZ</button>
-            <button type="reset" class="button_clear">RESETUJ FORMULARZ</button>
-            <button type="button" onclick="window.location.href='index.php'" class="button">ANULUJ</button>
+            <nav id="nav_profile" class="navigation">
+            <ul class="navigation-list-buttons">
+                <li class="navigation-list-li"><button type="submit" class="button_edit">ZAPISZ</button></li>
+                <li class="navigation-list-li"><button type="reset" class="button_clear">RESETUJ FORMULARZ</button></li>
+                <li class="navigation-list-li"><button type="button" onclick="window.location.href='index.php'" class="button">ANULUJ</button></li>
+            </ul>
+        <nav>
         </fieldset>
     </form>
 </body>

@@ -35,7 +35,6 @@ include '../php_scripts/session_index.php';
 
     <fieldset class="section">
         <legend class="section_legend">Wyszukiwarka</legend>
-        <!-- Tutaj dodaj pole do wyszukiwania -->
         <form class="search_form" method="get" action="index.php">
             <input type="text" name="search" class="field_input search_input" placeholder="Wyszukaj...">
             <button type="submit" class="button_search">SZUKAJ</button>
