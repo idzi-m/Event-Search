@@ -17,7 +17,7 @@ include '../php_scripts/connection.php';
         <h1>EventSearch - Wyszukiwarka eventów!</h1>
     </header>
 
-    <form method="post"action= "../db_scripts/user/user_add.php"> autocomplete="on" class="form_register">
+    <form method="post" action= "../db_scripts/user/user_add.php" autocomplete="on" class="form_register">
         <fieldset class="section">
             <legend class="section_legend">Twoje dane:</legend>
 
