@@ -7,7 +7,12 @@ CREATE TABLE Users(
     last_name VARCHAR(50),
     is_deleted BOOLEAN,
     login VARCHAR(50),
-    pass VARCHAR(50)
+    pass VARCHAR(50),
+    city VARCHAR(50),
+    phone VARCHAR(50),
+    email VARCHAR(50),
+    birth_date DATE,
+    gender VARCHAR(50)
 );
 CREATE TABLE EVENTS(
      id INT AUTO_INCREMENT PRIMARY KEY,

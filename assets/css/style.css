@@ -1,6 +1,6 @@
 .document {
     font-family: Arial, sans-serif;
-    color: #24024c;
+    color: #02074c;
 }
 
 /* Dodanie tła */
@@ -16,6 +16,7 @@
 .header {
     text-align: center;
     justify-content: center;
+    color: rgb(6, 36, 229);
     width: 0.98vm;
     margin-bottom: 20px;
     padding: 5px;
@@ -30,7 +31,7 @@
     justify-content: center;
     width: 0.98vm;
     margin-bottom: 20px;
-    padding: 5px;
+    padding: 10px;
     border: 1px solid #080540;
     background-color: rgba(37, 182, 184, 0.5);
     border-radius: 8px; /* Zaokrąglone krawędzie */
@@ -53,7 +54,9 @@
     justify-content: center;
     align-items: center;
 }
-
+.profile_card p{
+    color:#150a51;
+}
 /* Stylowanie przycisków */
 button {
     padding: 8px;
@@ -149,7 +152,7 @@ a:hover {
 }
 
 /* Stylizacja dla listy nawigacyjnej */
-.list-buttons {
+.navigation-list-buttons {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -158,7 +161,7 @@ a:hover {
     padding: 0px;
 }
 
-.list-li {
+.navigation-list-li {
     display: block;
     margin: 0px;
 }
@@ -200,9 +203,6 @@ a:hover {
     grid-template-columns: 1fr;
 }
 
-.event-details-image {
-    grid-row: span 1;
-}
 
 .events-grid {
     display: grid;
@@ -214,6 +214,7 @@ a:hover {
 .event-card {
     background-color: rgba(49, 180, 228, 0.5);
     padding: 15px;
+    max-width: 300px;
     border: 2px solid #24024c;
     border-radius: 8px;
     text-align: left;

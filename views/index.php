@@ -17,18 +17,18 @@ include '../php_scripts/session_index.php';
 <body class="content">
     
     <header class="header">
-        <h1>Wyszukiwarka Eventów</h1>
+        <h1>EventSearch - Wyszukiwarka eventów!</h1>
         <p><?php echo $user_message; ?></p>
     </header>
 
     <fieldset class="section">
-        <legend class="section_legend">EVENTSEARCH - wszystkie wydarzenia w jednym miejscu!</legend>
-        <nav id="nav" class="navigation">    
-            <ul class="list-buttons">
-                <li class="list-li"><?php if (!isset($_SESSION['user_id'])) { ?> <button onclick="window.location.href='login.php'" class='button_login'>ZALOGUJ</button> <?php } ?></li>    
-                <li class="list-li"><?php if (isset($_SESSION['user_id'])) { ?> <button onclick="window.location.href='../php_scripts/logout.php'" class='button_logout'>WYLOGUJ</button> <?php } ?></li> 
-                <li class="list-li"><button onclick="window.location.href='profile.php'" class="button_profile">PROFIL</button></li>
-                <li class="list-li"><button onclick="window.location.href='add_event_form.php'" class="button_add">DODAJ WYDARZENIE</button></li>
+        <legend class="section_legend">Wszystkie wydarzenia w jednym miejscu!</legend>
+        <nav id="nav_index" class="navigation">    
+            <ul class="navigation-list-buttons">
+                <li class="navigation-list-li"><?php if (!isset($_SESSION['user_id'])) { ?> <button onclick="window.location.href='login.php'" class='button_login'>ZALOGUJ</button> <?php } ?></li>    
+                <li class="navigation-list-li"><?php if (isset($_SESSION['user_id'])) { ?> <button onclick="window.location.href='../php_scripts/logout.php'" class='button_logout'>WYLOGUJ</button> <?php } ?></li> 
+                <li class="navigation-list-li"><button onclick="window.location.href='profile.php'" class="button_profile">PROFIL</button></li>
+                <li class="navigation-list-li"><button onclick="window.location.href='add_event_form.php'" class="button_add">DODAJ WYDARZENIE</button></li>
             </ul>
         </nav>
     </fieldset> 
@@ -43,7 +43,7 @@ include '../php_scripts/session_index.php';
     </fieldset>
 
     <fieldset class="section">
-        <legend class="section_legend">Wyniki</legend>
+        <legend class="section_legend">Wydarzenia</legend>
         <?php include '../db_scripts/event/event_search.php'; ?>
     </fieldset>
 

@@ -13,7 +13,7 @@ $sql = "SELECT * FROM events WHERE $whereClause ORDER BY event_date DESC";
 $result = $conn->query($sql);
 ?>
 
-<div class="container">
+<field class="container">
     <div class="row events-grid">
         <?php
         if ($result && mysqli_num_rows($result) > 0) {
@@ -26,7 +26,6 @@ $result = $conn->query($sql);
                 echo "<p><strong>Lokalizacja:</strong> {$row["location"]}</p>";
                 echo "<p><strong>Opis:</strong> {$row["short_desc"]}</p>";
                 echo "<p><strong>Cena:</strong> {$row["cena"]}</p>";
-                
                 echo "<button onclick=\"window.location.href='event_details.php?event_id={$row["id"]}'\">SZCZEGÓŁY</button>";
                 echo "</div>";
             }
@@ -37,4 +36,4 @@ $result = $conn->query($sql);
         $conn->close();
         ?>
     </div>
-</div>
+    </field>
