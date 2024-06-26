@@ -1,9 +1,12 @@
 
 INSERT INTO Users (first_name, second_name, last_name, login, pass) VALUES 
-('Adam', 'Borys', 'Kowalski', 'adam123', 'qwer!@#$'),
-('Ewa', 'Magda', 'Wiśniewska', 'ewa456', 'qwer!@#$'),
-('Piotr', null, 'Nowak', 'piotr678', 'qwer!@#$'),
-('Joachim', null, 'Tester', 'qwer', 'qwer!@#$');
+('Adam', 'Borys', 'Kowalski', 'adam123', 'qwer!@#$','Poznań','3433345123','test@dsdasd','1990-01-01','Mężczyzna'),
+('Katarzyna', 'Anna', 'Nowak', 'kasia123', 'qwer!@#$','Warszawa','3433345123','test@dsdasd','1990-01-01','Kobieta'),
+('Jan', 'Paweł', 'Kowalczyk', 'jan123', 'qwer!@#$','Kraków','3433345123','test@dsdasd','1990-01-01','Mężczyzna'),
+('Ewa', 'Magda', 'Wiśniewska', 'ewa456', 'qwer!@#$','Wrocław','3433345123','test@dsdasd','1990-01-01','Kobieta'),
+('Piotr', null, 'Nowak', 'piotr678', 'qwer!@#$','Gdańsk','3433345123','test@dsdasd','1990-01-01','Mężczyzna'),
+('Joachim', null, 'Tester', 'qwer', 'qwer!@#$','Poznań','3433345123','test@dsdasd','1990-01-01','No-binary');
+
 
 INSERT INTO Events (name, is_deleted, event_date, event_city, type, location, cena, short_desc, long_desc, creator_id, create_date, Operation_date) VALUES 
 ('Koncert rockowy', false, '2024-05-10 20:00:00', 'Warszawa', 'koncert', 'Stadion Narodowy', 120.50, 'Najlepszy koncert roku!', 'Opis długi o wydarzeniu...', 1, NOW(), NOW()),

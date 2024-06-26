@@ -26,63 +26,66 @@ $conn->close();
 </head>
 
 <body class="content">
+
+    <header class="header">
+        <h1>EventSearch - Wyszukiwarka eventów!</h1>
+        <p><?php echo $user_message; ?></p>
+    </header>
+
 <fieldset class="section">
     <legend class="section_legend">Profil użytkownika: <?php echo $user_data['first_name'] . ' ' . $user_data['last_name']; ?></legend>
-    <p>Login użytkownika: <?php echo $user_data['login']; ?></p>
-    <p>Miasto: Ponzań</p>
-    <p>NUmer telefonu: 34444134</p>
-    <p>Adres email: test@dsdasd</p>
-    <p>Data urodzenia: 1994-93-23</p>
-    <p>Płeć: test</p>
+    <div class="profile_card">
+    <p><strong>Login użytkownika:</strong> <?php echo $user_data['login']; ?></p>
+    <p><strong>Miasto:</strong> <?php echo $user_data['city']; ?></p>
+    <p><strong>Numer telefonu:</strong> <?php echo $user_data['phone']; ?></p>
+    <p><strong>Adres email:</strong> <?php echo $user_data['email']; ?></p>
+    <p><strong>Data urodzenia:</strong> <?php echo $user_data['birth_date']; ?></p>
+    <p><strong>Płeć:</strong> <?php echo $user_data['gender']; ?></p>
+    </div>
 </fieldset> 
-
-<fieldset class="section">
-    <legend class="section_legend">Lista wydarzeń utworzonych przez użytkownika</legend>
-    <table class="results_table">
-        <tr>
-            <th>ID</th>
-            <th>Nazwa wydarzenia</th>
-            <th>Data wydarzenia</th>
-            <th>Miasto</th>
-            <th>Typ</th>
-            <th>Lokalizacja</th>
-            <th>Krótki opis</th>
-            <th>Cena</th>
-            <th>Akcje</th>
-        </tr>
-
-        <?php
-        if ($result_events->num_rows > 0) {
-            while($row = $result_events->fetch_assoc()) {
-                echo "<tr>";
-                echo "<td>" . $row["id"] . "</td>";
-                echo "<td>" . $row["name"] . "</td>";
-                echo "<td>" . $row["event_date"] . "</td>";
-                echo "<td>" . $row["event_city"] . "</td>";
-                echo "<td>" . $row["type"] . "</td>";
-                echo "<td>" . $row["location"] . "</td>";
-                echo "<td>" . $row["short_desc"] . "</td>";
-                echo "<td>" . $row["cena"] . "</td>";
-                echo "<td><button onclick=\"window.location.href='event_details.php?event_id=" . $row["id"] . "'\" class='button'>SZCZEGÓŁY</button>";
-                echo "</tr>";
-            }
-        } else {
-            echo "<tr><td colspan='9'>Brak wydarzeń</td></tr>";
-        }
-        ?>
-    </table>
-</fieldset>
 
 <fieldset class="section section_action">
     <legend class="section_legend">Akcje</legend>
-    <button onclick="window.location.href='index.php'" class="button">POWRÓT DO LISTY WYDARZEŃ</button>
-    <button <?php if(!isset($_SESSION['user_id']) || $_SESSION['user_id'] != $user_data['id']) {echo "hidden";}?> onclick="window.location.href='edit_user_form.php?user_id=<?php echo $user_data['id']; ?>'" class="button_edit">EDYTUJ DANE UŻYTKOWNIKA</button>
-    <form action="../db_scripts/user/user_delete.php" method="post">
-        <input type="hidden" name="user_id" value="<?php echo $user_data['id']; ?>">
-        <button <?php if(!isset($_SESSION['user_id']) || $_SESSION['user_id'] != $user_data['id']) {echo "hidden";}?> type="submit" name="user_delete" class="button_delete" onclick="return confirm('Czy na pewno chcesz usunąć swoje konto?')">USUŃ KONTO</button>
-    </form>
+    <nav id="nav_profile" class="navigation">
+        <ul class="navigation-list-buttons">
+            <li class="navigation-list-li"><button onclick="window.location.href='index.php'" class="button">POWRÓT DO LISTY WYDARZEŃ</button></li>
+            <!-- <li class="navigation-list-li"><button onclick="window.location.href='edit_user_form.php?user_id=<?php echo $user_data['id']; ?>'" class="button_edit">EDYTUJ DANE UŻYTKOWNIKA</button></li>
+            <li class="navigation-list-li">
+                <form action="../db_scripts/user/user_delete.php" method="post">
+                    <input type="hidden" name="user_id" value="<?php echo $user_data['id']; ?>">
+                    <button type="submit" name="user_delete" class="button_delete" onclick="return confirm('Czy na pewno chcesz usunąć swoje konto?')">USUŃ KONTO</button>
+                </form>
+            </li> -->
+        </ul>
+    </nav>
 </fieldset>
 
+<fieldset class="section">
+    <legend class="section_legend">Lista wydarzeń utworzonych przez użytkownika</legend>
+    <div class="events-grid">
+        <?php
+        if ($result_events->num_rows > 0) {
+            while($row = $result_events->fetch_assoc()) {
+                echo "<div class='event-card'>";
+                echo "<h2>{$row["name"]}</h2>";
+                echo "<p><strong>Data:</strong> {$row["event_date"]}</p>";
+                echo "<p><strong>Miasto:</strong> {$row["event_city"]}</p>";
+                echo "<p><strong>Typ:</strong> {$row["type"]}</p>";
+                echo "<p><strong>Lokalizacja:</strong> {$row["location"]}</p>";
+                echo "<p><strong>Opis:</strong> {$row["short_desc"]}</p>";
+                echo "<p><strong>Cena:</strong> {$row["cena"]}</p>";
+                echo "<button onclick=\"window.location.href='event_details.php?event_id={$row["id"]}'\">SZCZEGÓŁY</button>";
+                echo "</div>";
+            }
+        } else {
+            echo "<div class='results_item'>Brak wydarzeń</div>";
+        }
+        ?>
+    </div>
+</fieldset>
+<footer class="footer">
+        <p>&copy; 2024 EventSearch.</p>
+        <p>Find me on <a href="https://github.com/idzi-m" target="_blank">GitHub</a></p>
+    </footer>
 </body>
 </html>
-

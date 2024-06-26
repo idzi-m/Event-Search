@@ -1,23 +1,46 @@
-
 .document {
     font-family: Arial, sans-serif;
-    color: #24024c;
+    color: #02074c;
 }
 
-/*Dodanie tła*/
+/* Dodanie tła */
 .content {
     background-image: url('../images/pexels-punchbrandstock-977737.jpg');
     background-color: #9cc1d3;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat:no-repeat;
 }
-/* Stylowanie nagłówka i stopki */
-.footer_header {
-    background-color: #f0f0f0;
-    padding: 20px;
+
+/* Stylowanie nagłówka */
+.header {
     text-align: center;
+    justify-content: center;
+    color: rgb(6, 36, 229);
+    width: 0.98vm;
     margin-bottom: 20px;
+    padding: 5px;
+    border: 1px solid #080540;
+    background-color: rgba(37, 182, 184, 0.5);
+    border-radius: 8px; /* Zaokrąglone krawędzie */
+}
+/* Stylowanie stopki */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(37, 182, 184, 0.5);
+    border-top: 1px solid #080540;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
 }
 
 /* Stylowanie sekcji */
@@ -26,11 +49,10 @@
     justify-content: center;
     width: 0.98vm;
     margin-bottom: 20px;
-    padding: 5px;
+    padding: 10px;
     border: 1px solid #080540;
     background-color: rgba(37, 182, 184, 0.5);
     border-radius: 8px; /* Zaokrąglone krawędzie */
-    
 }
 
 /* Stylowanie legend */
@@ -41,20 +63,17 @@
     padding: 5px;
     width: fit-content;
     text-align: center;
-
 }
 
-.section_login, .form_group{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
+.section_login,
+.form_group,
 .section_action {
     display: flex;
     justify-content: center;
     align-items: center;
-
+}
+.profile_card p{
+    color:#150a51;
 }
 /* Stylowanie przycisków */
 button {
@@ -81,43 +100,59 @@ button:active {
     padding: 8px;
     width: 200px;
     background-color: rgba(255, 255, 255, 0.7);
-}   
+}
+
 /* Stylowanie formularza wyszukiwania */
 .search_form {
     display: inline-block;
 }
 
-.button_clear, .button__logout{
+.button_clear,
+.button__logout {
     padding: 8px;
     background-color: #a76e28;
 }
-.button_edit, .button__search {
+
+.button_edit,
+.button__search {
     padding: 8px;
     background-color: #18e7ba;
 }
-.button_delete{
+
+.button_delete {
     padding: 8px;
     background-color: #e0d314;
 }
-/* Stylowanie tabeli wyników */
-.results_table {
-    border-collapse: collapse;
-    background-color:rgba(49, 180, 228, 0.5);
-    overflow: hidden;
-    justify-content: center;
+
+/* Stylowanie wyników grid */
+.results_grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* Ustawia 8 kolumn o równej szerokości */
+    gap: 10px;
+    background-color: rgba(49, 180, 228, 0.5);
+    padding: 10px;
+    border: 2px solid #24024c;
+    border-radius: 8px;
+    justify-items: center;
+}
+
+.results_header {
+    font: bold 14px Arial, sans-serif;
+    color: #24024c;
     text-align: center;
 }
 
-.results_table th, .results_table td {
+.results_item {
     padding: 10px;
-    border: 2px solid #24024c;
-    font: bold 14px Arial, sans-serif;
+    border: 1px solid #24024c;
+    font: 14px Arial, sans-serif;
     color: #24024c;
+    text-align: center;
 }
 
 /* Stylowanie linków */
 a {
-    color: #007bff; 
+    color: #007bff;
     text-decoration: none;
 }
 
@@ -125,11 +160,139 @@ a:hover {
     text-decoration: underline;
 }
 
-/*Styl okna detali*/
+/* Styl okna detali */
 .content_event-details {
     background-color: rgba(37, 182, 184, 0.5);
     padding: 10px;
     border: 2px solid #24024c;
     border-radius: 8px;
     margin-bottom: 20px;
+}
+
+/* Stylizacja dla listy nawigacyjnej */
+.navigation-list-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.navigation-list-li {
+    display: block;
+    margin: 0px;
+}
+
+.event-details-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    align-items: start;
+    background-color: rgba(49, 180, 228, 0.5);
+    padding: 20px;
+    border: 2px solid #24024c;
+    border-radius: 8px;
+}
+
+.event-details-image {
+    grid-row: span 2;
+    /* Dodaj styl dla obrazu, np.: */
+    width: 100%;
+    height: auto;
+    background-color: #e0e0e0; /* Szare tło jako zastępstwo */
+}
+
+.event-details-data {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.field_label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #24024c;
+}
+
+/* Responsive adjustments */
+
+.event-details-grid {
+    grid-template-columns: 1fr;
+}
+
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+.event-card {
+    background-color: rgba(49, 180, 228, 0.5);
+    padding: 15px;
+    max-width: 300px;
+    border: 2px solid #24024c;
+    border-radius: 8px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 15px;
+}
+
+.event-card h2 {
+    color: #24024c;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.event-card p {
+    color: #24024c;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.event-card button {
+    padding: 8px;
+    background-color: #007bff;
+    color: #080348;
+    border: 2px solid #083b72;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    display:block;
+    text-align: center;
+    margin-top: auto;
+}
+
+.event-card button:hover {
+    background-color: #0083b3;
+}
+
+.event-card button:active {
+    background-color: #00aab3;
+}
+/* Stylowanie formularza */
+.form_register {
+    margin: 0 auto;
+}
+
+.form_group {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+
+.form_group label {
+    font-weight: bold;
+}
+
+.field_input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
 }
